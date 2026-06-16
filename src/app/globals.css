@@ -1,0 +1,504 @@
+@import "tailwindcss";
+
+:root {
+  /* Google Fonts 用の変数定義 */
+  --font-handwritten: "Klee One", "Yu Klee", sans-serif;
+  --font-rounded: "Zen Maru Gothic", sans-serif;
+  --font-mincho: "Shippori Mincho B1", "Hiragino Mincho ProN", "YuMincho", serif;
+  --font-yomogi: "Yomogi", cursive, sans-serif;
+
+  /* ジブリ風喫茶店 カラーパレット */
+  --color-cream: #f4ede3;
+  --color-beige: #e3d5c3;
+  --color-beige-light: #f9f5ef;
+  --color-white: #fffef9;
+
+  /* アクセントカラー - ジブリ風 */
+  --color-sage: #9db388;
+  --color-sage-light: #c5d8b5;
+  --color-sage-dark: #7a9668;
+  --color-pink: #e7a89e;
+  --color-pink-light: #f3ccc6;
+  --color-pink-dark: #d38f85;
+  --color-terracotta: #d89a7a;
+  --color-forest: #6b8e5f;
+
+  /* テキストカラー - 温かみのある茶色 */
+  --color-text: #5f4b3d;
+  --color-text-dark: #4a3828;
+  --color-text-light: #8c7a68;
+
+  /* ボーダー・装飾 */
+  --color-border: #ded2c0;
+  --color-border-light: #ede5d8;
+  --color-gold: #c9a86a;
+  --color-gold-light: #e0c598;
+
+  /* ジブリ風グリーン */
+  --color-grass: #a5c882;
+  --color-leaf: #8fae72;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-beige: var(--color-beige);
+  --color-beige-light: var(--color-beige-light);
+  --color-white: var(--color-white);
+  --color-sage: var(--color-sage);
+  --color-sage-light: var(--color-sage-light);
+  --color-sage-dark: var(--color-sage-dark);
+  --color-pink: var(--color-pink);
+  --color-pink-light: var(--color-pink-light);
+  --color-pink-dark: var(--color-pink-dark);
+  --color-text: var(--color-text);
+  --color-text-dark: var(--color-text-dark);
+  --color-text-light: var(--color-text-light);
+  --color-border: var(--color-border);
+  --color-border-light: var(--color-border-light);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-terracotta: var(--color-terracotta);
+  --color-forest: var(--color-forest);
+  --color-grass: var(--color-grass);
+  --color-leaf: var(--color-leaf);
+  --font-sans: var(--font-rounded);
+  --font-serif: var(--font-handwritten);
+  --font-mincho: var(--font-mincho);
+  --font-yomogi: var(--font-yomogi);
+}
+
+body {
+  background-color: var(--color-cream);
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(244, 237, 227, 0.2)
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  color: var(--color-text);
+  font-family: var(--font-mincho), "Hiragino Mincho ProN", serif;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  line-height: 2.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* グローバルなテキスト折り返し設定 */
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+p,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ヴィンテージ・雑誌風共通スタイル */
+.section-title {
+  font-family: var(--font-yomogi);
+  color: var(--color-text-dark);
+  font-size: 1.5rem; /* デフォルト（スマホ）は小さめに */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em; /* スマホでは間隔を狭く */
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-shadow: 2px 2px 0 rgba(227, 213, 195, 0.5);
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 2.5rem; /* タブレット・PC以上で本来のサイズに */
+    letter-spacing: 0.2em;
+  }
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  display: none; /* スマホでは折り返し防止のため非表示 */
+  width: 40px;
+  height: 1px;
+  background: var(--color-text-dark);
+  vertical-align: middle;
+  margin: 0 1.5rem;
+  opacity: 0.6;
+}
+
+@media (min-width: 640px) {
+  .section-title::before,
+  .section-title::after {
+    display: inline-block; /* 640px以上で表示 */
+  }
+}
+
+.section-divider {
+  border: none;
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--color-text-light) 0,
+    var(--color-text-light) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  margin: 3rem auto;
+  width: 80%;
+  opacity: 0.5;
+}
+
+/* 雑誌風カードスタイル */
+.magazine-card {
+  background: var(--color-white);
+  padding: 3rem;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.02),
+    0 10px 20px rgba(0, 0, 0, 0.03);
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* 古紙の風合いをプラス */
+.paper-texture {
+  position: relative;
+}
+.paper-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.soft-card:hover {
+  transform: translateY(-2px);
+}
+
+/* 装飾ライン */
+.decorative-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--color-sage);
+}
+
+.decorative-line::before,
+.decorative-line::after {
+  content: "";
+  flex: 1;
+  max-width: 60px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border),
+    transparent
+  );
+}
+
+/* 手書き風の仕切り */
+.floral-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--color-sage);
+  font-size: 0.75rem;
+  margin: 1.25rem 0;
+  opacity: 0.6;
+}
+
+.floral-divider::before,
+.floral-divider::after {
+  content: "· · ·";
+  opacity: 0.4;
+  letter-spacing: 0.2em;
+  color: var(--color-sage-light);
+}
+
+/* エレガントボックス */
+.elegant-box {
+  background: var(--color-white);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--color-border-light);
+}
+
+/* タグスタイル */
+.elegant-tag {
+  background: var(--color-sage);
+  color: white;
+  padding: 0.25rem 0.875rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* 手書き風の優しいデザイン要素 */
+.magazine-section-number {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-sage-light);
+  opacity: 0.25;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  line-height: 1;
+  z-index: 0;
+  transform: rotate(-3deg);
+}
+
+.magazine-label {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--color-text-light);
+  padding: 0.3rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dotted var(--color-sage);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.magazine-label:hover {
+  color: var(--color-sage);
+}
+
+.magazine-quote {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 2;
+  color: var(--color-text);
+  padding: 1.25rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--color-sage-light);
+  background: transparent;
+  position: relative;
+}
+
+.magazine-quote::before {
+  content: none;
+}
+
+.magazine-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .magazine-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.magazine-feature-box {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 4px 20px rgba(157, 179, 136, 0.1);
+  position: relative;
+}
+
+.magazine-caption {
+  font-family: var(--font-rounded);
+  font-size: 0.7rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--color-border-light);
+}
+
+/* 優しいセクションコンテナ */
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* スムーズスクロール用の余白 */
+section {
+  scroll-margin-top: 2rem;
+}
+
+.pink-tag {
+  background: var(--color-pink);
+  color: white;
+  padding: 0.25rem 0.875rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-radius: 1rem;
+}
+/* フェードインアニメーション */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* 点線ボーダー */
+.dashed-border {
+  border: 1px dashed var(--color-border);
+  border-radius: 1rem;
+}
+
+/* 葉っぱ装飾 */
+.leaf-decoration {
+  color: var(--color-sage);
+  font-size: 1.25rem;
+}
+
+/* 印刷用スタイル - 専用コンポーネント用 */
+@media print {
+  @page {
+    size: A5 portrait;
+    margin: 0;
+  }
+
+  html {
+    font-size: 10pt !important;
+  }
+
+  html,
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif !important;
+    color: #000 !important;
+    line-height: 1.5 !important;
+    background-color: var(--color-cream) !important;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20L0 40h40L20 20zM0 0l20 20L40 0H0z' fill='%238da58d' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E") !important;
+    background-size: 20mm 20mm !important;
+  }
+
+  /* A5サイズのページ枠 */
+  .print-page-container {
+    width: 148.5mm !important;
+    height: 210mm !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background-color: var(--color-cream) !important;
+    box-sizing: border-box !important;
+    box-shadow: none !important;
+  }
+
+  /* 影を完全に無効化して灰色の枠に見えるのを防ぐ */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* セクションごとの改ページ */
+  .print-page {
+    page-break-after: always !important;
+    break-after: page !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .print-page:last-child {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* 印刷時にWeb用の要素を完全に隠す */
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* 印刷時に特定の要素を表示 */
+  .print\:block {
+    display: block !important;
+  }
+}
