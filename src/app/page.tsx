@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import { InvitationCountdown } from "@/components/InvitationCountdown";
 import { InvitationCover } from "@/components/InvitationCover";
-import { InvitationDebugMenu } from "@/components/InvitationDebugMenu";
 import { InvitationEventInfo } from "@/components/InvitationEventInfo";
 import { InvitationFusen } from "@/components/InvitationFusen";
 import { InvitationGallery } from "@/components/InvitationGallery";
