@@ -14,7 +14,7 @@ export function InvitationDebugMenu() {
       </p>
       <div className="flex flex-wrap justify-center gap-2">
         <Link
-          href="/invitation"
+          href="/"
           className={`px-2.5 py-1 text-[10px] rounded border transition-colors font-mincho ${
             !role
               ? "bg-[var(--color-text-dark)] text-white border-[var(--color-text-dark)]"
@@ -24,7 +24,7 @@ export function InvitationDebugMenu() {
           通常ゲスト
         </Link>
         <Link
-          href="/invitation?role=reception"
+          href="/?role=reception"
           className={`px-2.5 py-1 text-[10px] rounded border transition-colors font-mincho ${
             role === "reception"
               ? "bg-[var(--color-text-dark)] text-white border-[var(--color-text-dark)]"
@@ -34,7 +34,7 @@ export function InvitationDebugMenu() {
           受付係 (reception)
         </Link>
         <Link
-          href="/invitation?role=speech"
+          href="/?role=speech"
           className={`px-2.5 py-1 text-[10px] rounded border transition-colors font-mincho ${
             role === "speech"
               ? "bg-[var(--color-text-dark)] text-white border-[var(--color-text-dark)]"
@@ -44,7 +44,7 @@ export function InvitationDebugMenu() {
           祝辞 (speech)
         </Link>
         <Link
-          href="/invitation?role=dry"
+          href="/?role=dry"
           className={`px-2.5 py-1 text-[10px] rounded border transition-colors font-mincho ${
             role === "dry"
               ? "bg-[var(--color-text-dark)] text-white border-[var(--color-text-dark)]"
@@ -54,7 +54,7 @@ export function InvitationDebugMenu() {
           乾杯 (dry)
         </Link>
         <Link
-          href="/invitation?role=family"
+          href="/?role=family"
           className={`px-2.5 py-1 text-[10px] rounded border transition-colors font-mincho ${
             role === "family"
               ? "bg-[var(--color-text-dark)] text-white border-[var(--color-text-dark)]"
