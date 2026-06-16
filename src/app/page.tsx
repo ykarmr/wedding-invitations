@@ -51,13 +51,6 @@ export default function InvitationPage() {
         <p className="text-xs text-[var(--color-text-light)]">
           © 2026 Naoto & Yui. All Rights Reserved.
         </p>
-
-        {/* 管理者・動作確認用のパラメータ切り替えメニュー */}
-        {process.env.NODE_ENV === "development" && (
-          <Suspense fallback={null}>
-            <InvitationDebugMenu />
-          </Suspense>
-        )}
       </footer>
     </div>
   );
