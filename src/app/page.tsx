@@ -53,9 +53,11 @@ export default function InvitationPage() {
         </p>
 
         {/* 管理者・動作確認用のパラメータ切り替えメニュー */}
-        <Suspense fallback={null}>
-          <InvitationDebugMenu />
-        </Suspense>
+        {process.env.NODE_ENV === "development" && (
+          <Suspense fallback={null}>
+            <InvitationDebugMenu />
+          </Suspense>
+        )}
       </footer>
     </div>
   );
