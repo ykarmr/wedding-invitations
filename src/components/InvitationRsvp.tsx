@@ -31,7 +31,7 @@ export function InvitationRsvp() {
             お手数ではございますが 準備の都合上
             <br />
             <span className="inline-block whitespace-nowrap text-sm sm:text-lg md:text-xl font-bold border-b-2 border-[var(--color-gold)] pb-0.5 px-1.5 sm:px-2 mx-0.5 sm:mx-1">
-              2026年9月5日（土）
+              2026年9月1日（火）
             </span>
             までに
             <br />

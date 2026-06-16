@@ -42,7 +42,7 @@ export function InvitationEventInfo() {
                     挙式日
                   </p>
                   <p className="text-lg sm:text-xl md:text-2xl font-bold text-[var(--color-text-dark)] mt-1">
-                    2026年 10月 10日{" "}
+                    2026年 10月 24日{" "}
                     <span className="text-xs sm:text-sm">（土）</span>
                   </p>
                 </div>

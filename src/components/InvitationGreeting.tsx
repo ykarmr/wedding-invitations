@@ -34,7 +34,7 @@ export function InvitationGreeting() {
         {/* 招待状本文 (句読点なし、忌み言葉なしマナー準守) */}
         <div className="space-y-6 text-xs sm:text-sm md:text-base text-[var(--color-text)] leading-[2.5] tracking-widest font-mincho md:px-8">
           <p>
-            謹啓　初秋の候　皆様には益々ご清祥のことと
+            謹啓　盛夏の候　皆様には益々ご清祥のことと
             <br />
             お慶び申し上げます
           </p>
@@ -61,7 +61,7 @@ export function InvitationGreeting() {
         {/* 差出日と差出人 */}
         <div className="mt-16 pt-8 border-t border-[var(--color-border)] max-w-sm mx-auto space-y-4">
           <p className="text-xs tracking-[0.2em] text-[var(--color-text-light)]">
-            令和八年 八月吉日
+            令和八年 七月吉日
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center sm:items-baseline gap-3 sm:gap-6 mt-4">
             <div className="text-base sm:text-lg md:text-xl font-bold tracking-widest text-[var(--color-text-dark)]">

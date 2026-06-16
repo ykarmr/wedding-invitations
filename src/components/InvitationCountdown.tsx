@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { useInView } from "@/hooks/useInView";
 
-// 挙式日（2026年10月10日 10:30）
-const WEDDING_DATE = new Date("2026-10-10T10:30:00+09:00");
+// 挙式日（2026年10月24日 10:30）
+const WEDDING_DATE = new Date("2026-10-24T10:30:00+09:00");
 
 type TimeLeft = {
   days: number;

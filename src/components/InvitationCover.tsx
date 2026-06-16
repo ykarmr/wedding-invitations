@@ -30,7 +30,7 @@ export function InvitationCover() {
             Our Wedding
           </span>
           <span className="text-xs sm:text-sm md:text-base font-bold font-serif tracking-widest border-b border-[var(--color-text)] pb-0.5">
-            2026.10.10
+            2026.10.24
           </span>
         </div>
         <div className="flex flex-col items-end gap-0.5">
