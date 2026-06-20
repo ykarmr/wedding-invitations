@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useInView } from "@/hooks/useInView";
+import updateEnvPath from "@/utils/updateEnvPath";
 
 // 挙式日（2026年10月24日 10:30）
 const WEDDING_DATE = new Date("2026-10-24T10:30:00+09:00");
@@ -93,28 +94,23 @@ export function InvitationCountdown() {
   return (
     <section
       ref={ref}
-      className="py-20 md:py-28 px-6 relative overflow-hidden"
-      style={{ background: "var(--color-cream)" }}
+      className="py-24 md:py-32 px-6 relative overflow-hidden"
     >
-      {/* 背景装飾 */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 20% 60%, rgba(157,179,136,0.06) 0%, transparent 50%),
-            radial-gradient(circle at 80% 30%, rgba(231,168,158,0.06) 0%, transparent 50%)
-          `,
-        }}
-      />
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-12 opacity-30"
-        style={{ background: "var(--color-text-light)" }}
-      />
+      {/* 背景画像 */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={updateEnvPath("/images/invitation_cover.jpg")}
+          alt="Wedding Backdrop"
+          className="w-full h-full object-cover grayscale-[15%] sepia-[10%] contrast-[0.9]"
+        />
+        {/* ダークシネマティックオーバーレイ */}
+        <div className="absolute inset-0 bg-black/55 mix-blend-multiply"></div>
+      </div>
 
       <div className="max-w-2xl mx-auto relative z-10 text-center">
         {/* ヘッダー */}
         <div
-          className="mb-10 transition-all duration-700"
+          className="mb-12 transition-all duration-700"
           style={{
             opacity: isInView ? 1 : 0,
             transform: isInView ? "translateY(0)" : "translateY(16px)",
@@ -122,23 +118,23 @@ export function InvitationCountdown() {
         >
           <div className="decorative-line mb-6">
             <span
-              className="text-xs tracking-[0.2em] uppercase"
-              style={{ color: "var(--color-text-light)", fontFamily: "var(--font-rounded)" }}
+              className="text-xs tracking-[0.25em] uppercase font-bold text-[var(--color-cream)]"
+              style={{ fontFamily: "var(--font-mincho)" }}
             >
               Countdown
             </span>
           </div>
           <h2
-            className="text-2xl md:text-4xl font-bold mb-3 tracking-[0.15em]"
-            style={{ fontFamily: "var(--font-yomogi)", color: "var(--color-text-dark)" }}
+            className="text-3xl md:text-4xl font-bold mb-4 tracking-[0.2em] text-[var(--color-cream)]"
+            style={{ fontFamily: "var(--font-mincho)" }}
           >
             挙式まであと
           </h2>
           <p
-            className="text-xs tracking-widest"
-            style={{ color: "var(--color-text-light)", fontFamily: "var(--font-mincho)" }}
+            className="text-xs tracking-[0.2em] text-white/80 font-bold"
+            style={{ fontFamily: "var(--font-mincho)" }}
           >
-            2026年 10月 10日（土）
+            2026年 10月 24日（土）10:30 挙式
           </p>
         </div>
 
@@ -147,19 +143,19 @@ export function InvitationCountdown() {
           <div className="flex justify-center">
             {isPast ? (
               <p
-                className="text-xl font-bold tracking-widest"
-                style={{ color: "var(--color-sage)", fontFamily: "var(--font-yomogi)" }}
+                className="text-xl font-bold tracking-widest text-[var(--color-cream)]"
+                style={{ fontFamily: "var(--font-mincho)" }}
               >
                 🎊 本日、挙式の日です！
               </p>
             ) : (
               <div className="flex items-start gap-2 sm:gap-4">
                 <CountCard value={timeLeft.days}    label="Days"  delay="0ms"   isInView={isInView} />
-                <span className="text-2xl sm:text-3xl font-bold mt-4 animate-pulse-soft" style={{ color: "var(--color-text-light)" }}>:</span>
+                <span className="text-2xl sm:text-3xl font-bold mt-4 animate-pulse-soft text-white/70">:</span>
                 <CountCard value={timeLeft.hours}   label="Hours" delay="100ms" isInView={isInView} />
-                <span className="text-2xl sm:text-3xl font-bold mt-4 animate-pulse-soft" style={{ color: "var(--color-text-light)" }}>:</span>
+                <span className="text-2xl sm:text-3xl font-bold mt-4 animate-pulse-soft text-white/70">:</span>
                 <CountCard value={timeLeft.minutes} label="Mins"  delay="200ms" isInView={isInView} />
-                <span className="text-2xl sm:text-3xl font-bold mt-4 animate-pulse-soft" style={{ color: "var(--color-text-light)" }}>:</span>
+                <span className="text-2xl sm:text-3xl font-bold mt-4 animate-pulse-soft text-white/70">:</span>
                 <CountCard value={timeLeft.seconds} label="Secs"  delay="300ms" isInView={isInView} />
               </div>
             )}
