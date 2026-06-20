@@ -45,17 +45,14 @@ function CountCard({
       }}
     >
       <div
-        className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center rounded-xl overflow-hidden"
+        className="glass-card relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center rounded-2xl overflow-hidden border border-[var(--color-border-light)]"
         style={{
-          background:
-            "linear-gradient(145deg, var(--color-white) 0%, var(--color-beige-light) 100%)",
           boxShadow:
-            "0 4px 16px rgba(157,179,136,0.15), inset 0 1px 0 rgba(255,255,255,0.8)",
-          border: "1px solid var(--color-border-light)",
+            "0 10px 25px rgba(95, 75, 61, 0.08), inset 0 2px 4px rgba(255,255,255,0.6)",
         }}
       >
         <div
-          className="absolute left-0 right-0 h-[1px] top-1/2 -translate-y-1/2 opacity-20"
+          className="absolute left-0 right-0 h-[1px] top-1/2 -translate-y-1/2 opacity-25"
           style={{ background: "var(--color-border)" }}
         />
         <span
@@ -69,8 +66,8 @@ function CountCard({
         </span>
       </div>
       <span
-        className="text-[10px] sm:text-xs tracking-[0.15em] uppercase"
-        style={{ color: "var(--color-text-light)", fontFamily: "var(--font-rounded)" }}
+        className="text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold"
+        style={{ color: "var(--color-text-light)", fontFamily: "var(--font-mincho)" }}
       >
         {label}
       </span>

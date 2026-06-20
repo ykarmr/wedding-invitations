@@ -12,8 +12,12 @@
   --color-beige: #e3d5c3;
   --color-beige-light: #f9f5ef;
   --color-white: #fffef9;
+  --color-offwhite: #faf8f6;
 
-  /* アクセントカラー - ジブリ風 */
+  /* アクセントカラー - ジブリ風 + エレガントアッシュローズ */
+  --color-rose: #c8968e;
+  --color-rose-light: #f5eae7;
+  --color-rose-dark: #ab756d;
   --color-sage: #9db388;
   --color-sage-light: #c5d8b5;
   --color-sage-dark: #7a9668;
@@ -23,10 +27,11 @@
   --color-terracotta: #d89a7a;
   --color-forest: #6b8e5f;
 
-  /* テキストカラー - 温かみのある茶色 */
-  --color-text: #5f4b3d;
-  --color-text-dark: #4a3828;
-  --color-text-light: #8c7a68;
+  /* テキストカラー - 温かみのある茶色/チャコール */
+  --color-text: #4a3c31;
+  --color-text-dark: #33271e;
+  --color-text-light: #7c6d60;
+  --color-charcoal: #2c2c2c;
 
   /* ボーダー・装飾 */
   --color-border: #ded2c0;
@@ -44,6 +49,10 @@
   --color-beige: var(--color-beige);
   --color-beige-light: var(--color-beige-light);
   --color-white: var(--color-white);
+  --color-offwhite: var(--color-offwhite);
+  --color-rose: var(--color-rose);
+  --color-rose-light: var(--color-rose-light);
+  --color-rose-dark: var(--color-rose-dark);
   --color-sage: var(--color-sage);
   --color-sage-light: var(--color-sage-light);
   --color-sage-dark: var(--color-sage-dark);
@@ -53,6 +62,7 @@
   --color-text: var(--color-text);
   --color-text-dark: var(--color-text-dark);
   --color-text-light: var(--color-text-light);
+  --color-charcoal: var(--color-charcoal);
   --color-border: var(--color-border);
   --color-border-light: var(--color-border-light);
   --color-gold: var(--color-gold);
@@ -432,6 +442,33 @@ section {
 .leaf-decoration {
   color: var(--color-sage);
   font-size: 1.25rem;
+}
+
+/* アンティーク調額縁枠線 */
+.antique-border {
+  border: 4px double var(--color-border);
+  padding: 8px;
+  background-color: var(--color-white);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* グラスモルフィズム風アースカラーカード */
+.glass-card {
+  background: rgba(255, 254, 249, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(222, 210, 192, 0.4);
+  box-shadow: 0 8px 32px rgba(95, 75, 61, 0.06);
+}
+
+/* アーチ状の写真・要素フレーム */
+.arch-frame {
+  border-top-left-radius: 160px;
+  border-top-right-radius: 160px;
+  overflow: hidden;
+  border: 2px solid var(--color-border);
+  padding: 6px;
+  background: var(--color-white);
 }
 
 /* 印刷用スタイル - 専用コンポーネント用 */

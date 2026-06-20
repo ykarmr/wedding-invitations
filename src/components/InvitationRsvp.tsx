@@ -41,7 +41,7 @@ export function InvitationRsvp() {
 
         {/* カード */}
         <div
-          className={`magazine-card p-8 sm:p-12 text-center space-y-8 transition-all duration-1000 transform ${
+          className={`antique-border rounded-xl p-8 sm:p-12 text-center space-y-8 transition-all duration-1000 transform ${
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -50,7 +50,7 @@ export function InvitationRsvp() {
 
           {/* 本文 */}
           <div className="font-mincho space-y-3 text-[var(--color-text)] leading-relaxed text-sm sm:text-base">
-            <p>
+            <p className="font-bold">
               以下のボタンよりご回答フォームへお進みください。
             </p>
             <p className="text-xs text-[var(--color-text-light)]">
@@ -63,7 +63,7 @@ export function InvitationRsvp() {
             href={GOOGLE_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block w-full max-w-xs py-4 px-8 rounded-xl font-bold tracking-widest text-white bg-[var(--color-text-dark)] shadow-md transition-all duration-300 hover:bg-[var(--color-text)] hover:shadow-lg hover:-translate-y-0.5 active:scale-95"
+            className="inline-block w-full max-w-xs py-4 px-8 rounded-xl font-bold tracking-widest text-white bg-[var(--color-sage-dark)] hover:bg-[var(--color-forest)] shadow-md border-2 border-[var(--color-border)] transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 font-mincho"
           >
             <span className="flex items-center justify-center gap-2">
               <span>ご回答はこちら</span>

@@ -10,14 +10,14 @@ export function InvitationEventInfo() {
   return (
     <section
       ref={ref}
-      className="py-20 md:py-28 px-6 bg-[var(--color-white)] relative"
+      className="py-20 md:py-28 px-6 bg-[var(--color-cream)] relative"
     >
       <div className="max-w-4xl mx-auto">
-        <div className="section-header">
-          <span className="magazine-label">Information</span>
+        <div className="section-header text-center mb-16">
+          <span className="magazine-label font-bold">Information</span>
           <h2
-            className="section-title text-2xl md:text-4xl"
-            style={{ fontFamily: "var(--font-yomogi)" }}
+            className="text-2xl md:text-3xl font-bold tracking-[0.2em] text-[var(--color-text-dark)] mt-2"
+            style={{ fontFamily: "var(--font-mincho)" }}
           >
             日時と場所
           </h2>
@@ -30,9 +30,9 @@ export function InvitationEventInfo() {
           }`}
         >
           {/* 日時情報カード */}
-          <div className="magazine-card !p-5 sm:!p-10 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+          <div className="antique-border rounded-xl !p-6 sm:!p-10 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
             <div>
-              <span className="pink-tag mb-4 inline-block">WHEN</span>
+              <span className="pink-tag mb-4 inline-block font-bold">WHEN</span>
               <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-6 font-mincho">
                 日時
               </h3>
@@ -41,7 +41,7 @@ export function InvitationEventInfo() {
                   <p className="text-xs text-[var(--color-text-light)]">
                     挙式日
                   </p>
-                  <p className="text-lg sm:text-xl md:text-2xl font-bold text-[var(--color-text-dark)] mt-1">
+                  <p className="text-lg sm:text-xl font-bold text-[var(--color-text-dark)] mt-1">
                     2026年 10月 24日{" "}
                     <span className="text-xs sm:text-sm">（土）</span>
                   </p>
@@ -75,9 +75,9 @@ export function InvitationEventInfo() {
           </div>
 
           {/* 会場情報カード */}
-          <div className="magazine-card !p-5 sm:!p-10 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+          <div className="antique-border rounded-xl !p-6 sm:!p-10 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
             <div>
-              <span className="elegant-tag mb-4 inline-block">WHERE</span>
+              <span className="elegant-tag mb-4 inline-block font-bold">WHERE</span>
               <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-6 font-mincho">
                 場所
               </h3>
@@ -86,7 +86,7 @@ export function InvitationEventInfo() {
                   <p className="text-xs text-[var(--color-text-light)]">
                     会場名
                   </p>
-                  <p className="text-base sm:text-lg md:text-xl font-bold text-[var(--color-text-dark)] mt-1">
+                  <p className="text-base sm:text-lg font-bold text-[var(--color-text-dark)] mt-1">
                     アプローズスクエア 東京迎賓館
                   </p>
                 </div>
@@ -110,7 +110,7 @@ export function InvitationEventInfo() {
                 href="https://www.bestbridal.co.jp/tokyo/applause_ichigaya/access/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-[var(--color-sage-dark)] border-b border-[var(--color-sage-dark)] pb-0.5 hover:text-[var(--color-text-dark)] transition-colors"
+                className="text-xs text-[var(--color-sage-dark)] border-b border-[var(--color-sage-dark)] pb-0.5 hover:text-[var(--color-text-dark)] transition-colors font-bold"
               >
                 式場公式アクセスページへ
               </a>
@@ -119,16 +119,16 @@ export function InvitationEventInfo() {
         </div>
 
         {/* アクセスタブ（少しの動きとインタラクティブ要素） */}
-        <div className="mt-16 bg-[var(--color-beige-light)] rounded-2xl p-4 sm:p-8">
-          <h3 className="text-center font-bold font-mincho text-[var(--color-text-dark)] mb-6 text-sm sm:text-base md:text-lg">
-            アクセス方法
+        <div className="mt-16 bg-[var(--color-beige-light)] rounded-2xl p-6 sm:p-8 shadow-inner border border-[var(--color-border-light)]">
+          <h3 className="text-center font-bold font-mincho text-[var(--color-text-dark)] mb-6 text-sm sm:text-base md:text-lg tracking-widest">
+            ● アクセス方法 ●
           </h3>
 
           {/* タブ切り替えボタン */}
           <div className="flex justify-center border-b border-[var(--color-border)] mb-6">
             <button
               onClick={() => setActiveTab("train")}
-              className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-bold font-mincho transition-all border-b-2 -mb-[2px] ${
+              className={`px-4 sm:px-6 py-3 text-xs sm:text-sm font-bold font-mincho transition-all border-b-2 -mb-[2px] ${
                 activeTab === "train"
                   ? "border-[var(--color-sage)] text-[var(--color-text-dark)]"
                   : "border-transparent text-[var(--color-text-light)] hover:text-[var(--color-text-dark)]"

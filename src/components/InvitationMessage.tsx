@@ -31,10 +31,10 @@ export function InvitationMessage() {
       className="py-20 md:py-28 px-6 relative"
       style={{ background: "var(--color-beige-light)" }}
     >
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         {/* ヘッダー */}
         <div
-          className="text-center mb-14 transition-all duration-700"
+          className="text-center mb-16 transition-all duration-700"
           style={{
             opacity: isInView ? 1 : 0,
             transform: isInView ? "translateY(0)" : "translateY(16px)",
@@ -42,73 +42,76 @@ export function InvitationMessage() {
         >
           <div className="decorative-line mb-6">
             <span
-              className="text-xs tracking-[0.2em] uppercase"
-              style={{ color: "var(--color-text-light)", fontFamily: "var(--font-rounded)" }}
+              className="text-xs tracking-[0.25em] uppercase font-bold text-[var(--color-text-light)]"
+              style={{ fontFamily: "var(--font-mincho)" }}
             >
               Message
             </span>
           </div>
           <h2
-            className="text-2xl md:text-4xl font-bold tracking-[0.15em]"
-            style={{ fontFamily: "var(--font-yomogi)", color: "var(--color-text-dark)" }}
+            className="text-2xl md:text-3xl font-bold tracking-[0.15em] text-[var(--color-text-dark)]"
+            style={{ fontFamily: "var(--font-mincho)" }}
           >
             ふたりより
           </h2>
         </div>
 
-        {/* メッセージカード */}
-        <div className="space-y-12">
-          {messages.map((msg, i) => (
-            <div
-              key={msg.role}
-              className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start transition-all duration-700"
-              style={{
-                opacity: isInView ? 1 : 0,
-                transform: isInView ? "translateY(0)" : "translateY(20px)",
-                transitionDelay: `${200 + i * 150}ms`,
-              }}
-            >
-              {/* 写真 */}
-              <div className="flex-shrink-0 mx-auto sm:mx-0">
-                <div
-                  className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden"
-                  style={{
-                    border: "3px solid var(--color-border)",
-                    boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
-                  }}
-                >
-                  <img
-                    src={msg.image}
-                    alt={msg.alt}
-                    className="w-full h-full object-cover object-center"
-                  />
+        {/* メッセージカード - 左右アシンメトリー構成 */}
+        <div className="space-y-16">
+          {messages.map((msg, i) => {
+            const isEven = i % 2 === 0;
+            return (
+              <div
+                key={msg.role}
+                className={`flex flex-col ${
+                  isEven ? "md:flex-row" : "md:flex-row-reverse"
+                } gap-8 md:gap-12 items-center md:items-start transition-all duration-700`}
+                style={{
+                  opacity: isInView ? 1 : 0,
+                  transform: isInView ? "translateY(0)" : "translateY(20px)",
+                  transitionDelay: `${200 + i * 150}ms`,
+                }}
+              >
+                {/* 写真：アンティーク調ウッド/額縁フレーム */}
+                <div className="flex-shrink-0 w-full max-w-[200px] sm:max-w-[220px]">
+                  <div className="antique-border rounded-lg overflow-hidden shadow-lg transform rotate-[-1deg] hover:rotate-[1deg] transition-transform duration-500">
+                    <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 rounded">
+                      <img
+                        src={msg.image}
+                        alt={msg.alt}
+                        className="w-full h-full object-cover object-center grayscale-[5%] sepia-[5%] hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* テキストエリア */}
+                <div className={`flex-1 text-center md:text-left ${!isEven ? "md:text-right" : ""} pt-4`}>
+                  {/* ロール見出し */}
+                  <div className={`flex items-center justify-center md:justify-start ${!isEven ? "md:justify-end" : ""} gap-2 mb-4`}>
+                    <span className="text-lg">{msg.icon}</span>
+                    <span
+                      className="text-xs tracking-[0.3em] font-serif uppercase font-bold text-[var(--color-text-light)]"
+                    >
+                      {msg.role}
+                    </span>
+                    <span className="text-base font-bold text-[var(--color-text-dark)] font-mincho">
+                      {msg.name}
+                    </span>
+                  </div>
+
+                  {/* 本文 */}
+                  <p
+                    className={`text-sm sm:text-base leading-[2.6] tracking-wider text-[var(--color-text)] font-mincho py-4 ${
+                      isEven ? "md:pl-6 md:border-l" : "md:pr-6 md:border-r"
+                    } border-[var(--color-border-light)] bg-[var(--color-white)]/40 p-6 rounded-lg shadow-sm`}
+                  >
+                    {msg.text}
+                  </p>
                 </div>
               </div>
-
-              {/* テキスト */}
-              <div className="flex-1 text-center sm:text-left">
-                {/* ロール */}
-                <p
-                  className="text-xs tracking-[0.25em] mb-3"
-                  style={{ color: "var(--color-text-light)", fontFamily: "var(--font-rounded)" }}
-                >
-                  {msg.icon} {msg.role} {msg.name} より
-                </p>
-
-                {/* 本文 */}
-                <p
-                  className="text-sm sm:text-base leading-[2.4] tracking-wider sm:pl-4 sm:border-l-2"
-                  style={{
-                    color: "var(--color-text)",
-                    fontFamily: "var(--font-mincho)",
-                    borderColor: "var(--color-border)",
-                  }}
-                >
-                  {msg.text}
-                </p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
