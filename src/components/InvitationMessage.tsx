@@ -40,14 +40,15 @@ export function InvitationMessage() {
             transform: isInView ? "translateY(0)" : "translateY(16px)",
           }}
         >
-          <div className="decorative-line mb-6">
+          <div className="decorative-line mb-4">
             <span
-              className="text-xs tracking-[0.25em] uppercase font-bold text-[var(--color-text-light)]"
-              style={{ fontFamily: "var(--font-mincho)" }}
+              className="text-sm tracking-[0.25em] uppercase text-[var(--color-text-light)]"
+              style={{ fontFamily: "var(--font-vintage-serif)" }}
             >
               Message
             </span>
           </div>
+          <div className="vintage-flourish mb-6">❦</div>
           <h2
             className="text-2xl md:text-3xl font-bold tracking-[0.15em] text-[var(--color-text-dark)]"
             style={{ fontFamily: "var(--font-mincho)" }}
@@ -72,14 +73,14 @@ export function InvitationMessage() {
                   transitionDelay: `${200 + i * 150}ms`,
                 }}
               >
-                {/* 写真：アンティーク調ウッド/額縁フレーム */}
+                {/* 写真：アンティーク調ウッド/額縁フレーム + ビンテージフォトフィルター */}
                 <div className="flex-shrink-0 w-full max-w-[200px] sm:max-w-[220px]">
                   <div className="antique-border rounded-lg overflow-hidden shadow-lg transform rotate-[-1deg] hover:rotate-[1deg] transition-transform duration-500">
                     <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 rounded">
                       <img
                         src={msg.image}
                         alt={msg.alt}
-                        className="w-full h-full object-cover object-center grayscale-[5%] sepia-[5%] hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-cover object-center vintage-photo hover:scale-105 transition-transform duration-700"
                       />
                     </div>
                   </div>
@@ -91,7 +92,8 @@ export function InvitationMessage() {
                   <div className={`flex items-center justify-center md:justify-start ${!isEven ? "md:justify-end" : ""} gap-2 mb-4`}>
                     <span className="text-lg">{msg.icon}</span>
                     <span
-                      className="text-xs tracking-[0.3em] font-serif uppercase font-bold text-[var(--color-text-light)]"
+                      className="text-xs tracking-[0.3em] uppercase font-bold text-[var(--color-text-light)]"
+                      style={{ fontFamily: "var(--font-vintage-serif)" }}
                     >
                       {msg.role}
                     </span>
@@ -100,11 +102,11 @@ export function InvitationMessage() {
                     </span>
                   </div>
 
-                  {/* 本文 */}
+                  {/* 本文 - 羊皮紙風（parchment-card）に */}
                   <p
                     className={`text-sm sm:text-base leading-[2.6] tracking-wider text-[var(--color-text)] font-mincho py-4 ${
                       isEven ? "md:pl-6 md:border-l" : "md:pr-6 md:border-r"
-                    } border-[var(--color-border-light)] bg-[var(--color-white)]/40 p-6 rounded-lg shadow-sm`}
+                    } border-[var(--color-border-light)] parchment-card p-6 rounded-lg shadow-sm`}
                   >
                     {msg.text}
                   </p>

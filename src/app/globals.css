@@ -6,6 +6,8 @@
   --font-rounded: "Zen Maru Gothic", sans-serif;
   --font-mincho: "Shippori Mincho B1", "Hiragino Mincho ProN", "YuMincho", serif;
   --font-yomogi: "Yomogi", cursive, sans-serif;
+  --font-vintage-serif: "Cormorant Garamond", serif;
+  --font-vintage-script: "Alex Brush", cursive;
 
   /* ジブリ風喫茶店 カラーパレット */
   --color-cream: #f4ede3;
@@ -75,6 +77,8 @@
   --font-serif: var(--font-handwritten);
   --font-mincho: var(--font-mincho);
   --font-yomogi: var(--font-yomogi);
+  --font-vintage-serif: var(--font-vintage-serif);
+  --font-vintage-script: var(--font-vintage-script);
 }
 
 body {
@@ -469,6 +473,50 @@ section {
   border: 2px solid var(--color-border);
   padding: 6px;
   background: var(--color-white);
+}
+
+/* ビンテージ加工ユーティリティ */
+.vintage-photo {
+  filter: sepia(0.3) contrast(0.95) brightness(0.95) saturate(0.85);
+  transition: filter 0.5s ease;
+}
+.vintage-photo:hover {
+  filter: sepia(0.15) contrast(1) brightness(1) saturate(1);
+}
+
+/* アンティーク調二重額縁 */
+.vintage-double-border {
+  border: 1px solid var(--color-border);
+  position: relative;
+  padding: 1.5rem;
+}
+.vintage-double-border::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 2px double var(--color-border);
+  pointer-events: none;
+}
+
+/* 羊皮紙風カード */
+.parchment-card {
+  background: radial-gradient(circle, var(--color-beige-light) 0%, var(--color-cream) 100%);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(74, 60, 49, 0.08), inset 0 0 20px rgba(74, 60, 49, 0.04);
+}
+
+/* 唐草模様・エレガント装飾デコレーション */
+.vintage-flourish {
+  font-family: var(--font-vintage-serif);
+  font-size: 1.5rem;
+  color: var(--color-gold);
+  text-align: center;
+  margin: 1rem 0;
+  letter-spacing: 0.3em;
+  opacity: 0.8;
 }
 
 /* 印刷用スタイル - 専用コンポーネント用 */

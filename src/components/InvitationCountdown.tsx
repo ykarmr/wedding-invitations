@@ -46,10 +46,10 @@ function CountCard({
       }}
     >
       <div
-        className="glass-card relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center rounded-2xl overflow-hidden border border-[var(--color-border-light)]"
+        className="parchment-card relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center rounded-2xl overflow-hidden border-2 border-double border-[var(--color-gold)]/40"
         style={{
           boxShadow:
-            "0 10px 25px rgba(95, 75, 61, 0.08), inset 0 2px 4px rgba(255,255,255,0.6)",
+            "0 10px 25px rgba(74, 60, 49, 0.12), inset 0 0 12px rgba(74, 60, 49, 0.05)",
         }}
       >
         <div
@@ -68,7 +68,7 @@ function CountCard({
       </div>
       <span
         className="text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold"
-        style={{ color: "var(--color-text-light)", fontFamily: "var(--font-mincho)" }}
+        style={{ color: "var(--color-text-light)", fontFamily: "var(--font-vintage-serif)" }}
       >
         {label}
       </span>
@@ -101,10 +101,10 @@ export function InvitationCountdown() {
         <img
           src={updateEnvPath("/images/invitation_cover.jpg")}
           alt="Wedding Backdrop"
-          className="w-full h-full object-cover grayscale-[15%] sepia-[10%] contrast-[0.9]"
+          className="w-full h-full object-cover filter sepia-[0.3] contrast-[0.9] brightness-[0.8]"
         />
         {/* ダークシネマティックオーバーレイ */}
-        <div className="absolute inset-0 bg-black/55 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-black/45 mix-blend-multiply"></div>
       </div>
 
       <div className="max-w-2xl mx-auto relative z-10 text-center">
@@ -116,14 +116,15 @@ export function InvitationCountdown() {
             transform: isInView ? "translateY(0)" : "translateY(16px)",
           }}
         >
-          <div className="decorative-line mb-6">
+          <div className="decorative-line mb-4">
             <span
-              className="text-xs tracking-[0.25em] uppercase font-bold text-[var(--color-cream)]"
-              style={{ fontFamily: "var(--font-mincho)" }}
+              className="text-sm tracking-[0.25em] uppercase text-[var(--color-cream)]"
+              style={{ fontFamily: "var(--font-vintage-serif)" }}
             >
               Countdown
             </span>
           </div>
+          <div className="vintage-flourish mb-6 text-[var(--color-gold-light)]">❦</div>
           <h2
             className="text-3xl md:text-4xl font-bold mb-4 tracking-[0.2em] text-[var(--color-cream)]"
             style={{ fontFamily: "var(--font-mincho)" }}

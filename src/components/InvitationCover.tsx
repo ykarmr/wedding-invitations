@@ -53,25 +53,37 @@ export function InvitationCover() {
         }}
       />
 
-      {/* エレガントな白枠線 */}
-      <div className="absolute inset-4 sm:inset-6 md:inset-8 border border-white/20 z-0 pointer-events-none" />
-      <div className="absolute inset-5 sm:inset-7 md:inset-9 border border-white/10 z-0 pointer-events-none" />
+      {/* エレガントなヴィンテージ金枠線 */}
+      <div className="absolute inset-4 sm:inset-6 md:inset-8 border border-[var(--color-gold)]/30 z-0 pointer-events-none" />
+      <div className="absolute inset-5 sm:inset-7 md:inset-9 border-2 border-double border-[var(--color-gold)]/20 z-0 pointer-events-none" />
 
       {/* トップヘッダー */}
       <div className="w-full max-w-5xl flex justify-between items-end z-10 pt-4 px-2 select-none">
         <div className="flex flex-col items-start gap-1">
-          <span className="text-[10px] sm:text-xs tracking-[0.25em] font-serif uppercase text-white/80 drop-shadow-md">
+          <span 
+            className="text-xs sm:text-sm tracking-[0.25em] uppercase text-white/80 drop-shadow-md"
+            style={{ fontFamily: "var(--font-vintage-serif)" }}
+          >
             Our Wedding
           </span>
-          <span className="text-xs sm:text-sm font-bold font-serif tracking-widest border-b border-white/60 pb-0.5 text-white drop-shadow-md">
+          <span 
+            className="text-sm sm:text-base font-medium tracking-widest border-b border-[var(--color-gold)]/60 pb-0.5 text-white drop-shadow-md"
+            style={{ fontFamily: "var(--font-vintage-serif)" }}
+          >
             2026.10.24
           </span>
         </div>
         <div className="flex flex-col items-end gap-1">
-          <span className="text-[10px] sm:text-xs tracking-[0.25em] font-serif text-white/80 uppercase drop-shadow-md">
+          <span 
+            className="text-xs sm:text-sm tracking-[0.25em] text-white/80 uppercase drop-shadow-md"
+            style={{ fontFamily: "var(--font-vintage-serif)" }}
+          >
             Invitation
           </span>
-          <span className="text-xs sm:text-sm font-bold font-serif tracking-widest text-white drop-shadow-md">
+          <span 
+            className="text-sm sm:text-base font-medium tracking-widest text-white drop-shadow-md"
+            style={{ fontFamily: "var(--font-vintage-serif)" }}
+          >
             Yuki & Sayaka
           </span>
         </div>
@@ -83,7 +95,10 @@ export function InvitationCover() {
           isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <div className="mb-4 text-[10px] sm:text-xs tracking-[0.45em] uppercase text-white/95 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)] font-serif font-semibold">
+        <div 
+          className="mb-2 text-3xl sm:text-5xl text-[var(--color-gold-light)] drop-shadow-[0_1.5px_4px_rgba(0,0,0,0.6)]"
+          style={{ fontFamily: "var(--font-vintage-script)" }}
+        >
           Save the Date
         </div>
         
@@ -94,23 +109,32 @@ export function InvitationCover() {
           結婚式のご案内
         </h1>
 
-        <div className="w-16 h-[1px] bg-white/60 mb-6 drop-shadow-md" />
+        <div className="w-20 h-[1px] bg-[var(--color-gold-light)]/60 mb-6 drop-shadow-md" />
 
-        <div className="text-xl sm:text-3xl md:text-4xl font-serif italic text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] tracking-widest">
+        <div 
+          className="text-4xl sm:text-6xl text-[var(--color-gold-light)] drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+          style={{ fontFamily: "var(--font-vintage-script)" }}
+        >
           Yuki & Sayaka
         </div>
       </div>
 
       {/* ボトムセクションとスクロール促し */}
       <div className="w-full flex flex-col items-center gap-3 z-10 pb-4 select-none">
-        <div className="text-[10px] tracking-[0.3em] font-serif uppercase text-white/90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+        <div 
+          className="text-xs sm:text-sm tracking-[0.3em] uppercase text-white/90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]"
+          style={{ fontFamily: "var(--font-vintage-serif)" }}
+        >
           Welcome to Our Special Day
         </div>
         <div className="flex flex-col items-center gap-2 opacity-80 mt-2">
-          <span className="text-[9px] tracking-[0.4em] uppercase font-serif animate-shimmer text-white drop-shadow-[0_1.5px_4px_rgba(0,0,0,0.6)] font-bold">
+          <span 
+            className="text-[10px] tracking-[0.4em] uppercase font-bold animate-shimmer text-white drop-shadow-[0_1.5px_4px_rgba(0,0,0,0.6)]"
+            style={{ fontFamily: "var(--font-vintage-serif)" }}
+          >
             Scroll Down
           </span>
-          <div className="w-[1px] h-10 bg-white/70 origin-top animate-pulse-soft"></div>
+          <div className="w-[1px] h-10 bg-[var(--color-gold-light)]/70 origin-top animate-pulse-soft"></div>
         </div>
       </div>
     </section>

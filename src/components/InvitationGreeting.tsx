@@ -18,19 +18,24 @@ export function InvitationGreeting() {
           isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        {/* 外枠をアンティークボード風に */}
-        <div className="antique-border p-6 sm:p-12 md:p-16 rounded-xl relative">
+        {/* 外枠を羊皮紙風のアンティークボードに */}
+        <div className="parchment-card antique-border p-6 sm:p-12 md:p-16 rounded-xl relative">
           {/* コーナーのアクセント */}
-          <span className="absolute top-3 left-4 text-xs text-[var(--color-sage-light)] opacity-40 font-serif">🌿</span>
-          <span className="absolute top-3 right-4 text-xs text-[var(--color-sage-light)] opacity-40 font-serif">🌿</span>
-          <span className="absolute bottom-3 left-4 text-xs text-[var(--color-sage-light)] opacity-40 font-serif">🌿</span>
-          <span className="absolute bottom-3 right-4 text-xs text-[var(--color-sage-light)] opacity-40 font-serif">🌿</span>
+          <span className="absolute top-3 left-4 text-xs text-[var(--color-gold)] opacity-50 font-serif">✦</span>
+          <span className="absolute top-3 right-4 text-xs text-[var(--color-gold)] opacity-50 font-serif">✦</span>
+          <span className="absolute bottom-3 left-4 text-xs text-[var(--color-gold)] opacity-50 font-serif">✦</span>
+          <span className="absolute bottom-3 right-4 text-xs text-[var(--color-gold)] opacity-50 font-serif">✦</span>
 
-          <div className="decorative-line mb-6">
-            <span className="text-xs tracking-[0.25em] font-serif uppercase text-[var(--color-text-light)] font-bold">
+          <div className="decorative-line mb-4">
+            <span 
+              className="text-sm tracking-[0.25em] uppercase text-[var(--color-text-light)] font-medium"
+              style={{ fontFamily: "var(--font-vintage-serif)" }}
+            >
               Greeting
             </span>
           </div>
+
+          <div className="vintage-flourish mb-6">❦</div>
 
           <h2
             className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-10 tracking-[0.2em]"
@@ -75,7 +80,12 @@ export function InvitationGreeting() {
               <div className="text-base sm:text-lg md:text-xl font-bold tracking-widest text-[var(--color-text-dark)] font-mincho">
                 有村 勇樹
               </div>
-              <div className="text-[10px] text-[var(--color-text-light)] font-serif select-none">and</div>
+              <div 
+                className="text-lg text-[var(--color-gold)] font-medium select-none"
+                style={{ fontFamily: "var(--font-vintage-script)" }}
+              >
+                and
+              </div>
               <div className="text-base sm:text-lg md:text-xl font-bold tracking-widest text-[var(--color-text-dark)] font-mincho">
                 池上 紗弥香
               </div>
