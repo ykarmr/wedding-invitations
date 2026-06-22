@@ -18,13 +18,10 @@ export function InvitationGreeting() {
           isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        {/* 外枠を羊皮紙風のアンティークボードに */}
-        <div className="parchment-card antique-border p-6 sm:p-12 md:p-16 rounded-xl relative">
-          {/* コーナーのアクセント */}
-          <span className="absolute top-3 left-4 text-xs text-[var(--color-gold)] opacity-50 font-serif">✦</span>
-          <span className="absolute top-3 right-4 text-xs text-[var(--color-gold)] opacity-50 font-serif">✦</span>
-          <span className="absolute bottom-3 left-4 text-xs text-[var(--color-gold)] opacity-50 font-serif">✦</span>
-          <span className="absolute bottom-3 right-4 text-xs text-[var(--color-gold)] opacity-50 font-serif">✦</span>
+        {/* 外枠をカードから解放、ビンテージ二重罫線でフレームに */}
+        <div className="relative py-4">
+          {/* 上部の二重罫線 */}
+          <div className="vintage-double-rule mb-12" />
 
           <div className="decorative-line mb-4">
             <span 
@@ -91,6 +88,9 @@ export function InvitationGreeting() {
               </div>
             </div>
           </div>
+
+          {/* 下部の二重罫線 */}
+          <div className="vintage-double-rule mt-12" />
         </div>
       </div>
     </section>

@@ -39,8 +39,8 @@ export function InvitationEventInfo() {
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {/* 日時情報カード */}
-          <div className="antique-border rounded-xl !p-6 sm:!p-10 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+          {/* 日時情報 */}
+          <div className="border-t-4 border-double border-[var(--color-border)] pt-8 sm:pt-10 flex flex-col justify-between">
             <div>
               <span className="pink-tag mb-4 inline-block font-bold">WHEN</span>
               <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-6 font-mincho">
@@ -84,8 +84,8 @@ export function InvitationEventInfo() {
             </div>
           </div>
 
-          {/* 会場情報カード */}
-          <div className="antique-border rounded-xl !p-6 sm:!p-10 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+          {/* 会場情報 */}
+          <div className="border-t-4 border-double border-[var(--color-border)] pt-8 sm:pt-10 flex flex-col justify-between">
             <div>
               <span className="elegant-tag mb-4 inline-block font-bold">WHERE</span>
               <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-6 font-mincho">
@@ -128,8 +128,8 @@ export function InvitationEventInfo() {
           </div>
         </div>
 
-        {/* アクセスタブ（少しの動きとインタラクティブ要素） */}
-        <div className="mt-16 bg-[var(--color-beige-light)] rounded-2xl p-6 sm:p-8 shadow-inner border border-[var(--color-border-light)]">
+        {/* アクセスタブ */}
+        <div className="mt-16 border-t-4 border-double border-[var(--color-border)] pt-10">
           <h3 className="text-center font-bold font-mincho text-[var(--color-text-dark)] mb-6 text-sm sm:text-base md:text-lg tracking-widest">
             ● アクセス方法 ●
           </h3>

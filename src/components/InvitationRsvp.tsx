@@ -42,12 +42,14 @@ export function InvitationRsvp() {
           </p>
         </div>
 
-        {/* カード */}
+        {/* オープンレイアウト（カードなし）+ ビンテージ二重罫線 */}
         <div
-          className={`parchment-card antique-border rounded-xl p-8 sm:p-12 text-center space-y-8 transition-all duration-1000 transform ${
+          className={`py-8 text-center space-y-8 transition-all duration-1000 transform ${
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
+          {/* 上部ビンテージ罫線 */}
+          <div className="vintage-double-rule mb-10" />
           {/* アイコン */}
           <div className="text-5xl">🕊️</div>
 
@@ -91,6 +93,9 @@ export function InvitationRsvp() {
           <p className="text-[10px] sm:text-xs text-[var(--color-text-light)] font-mincho">
             ※ 別ウィンドウでGoogle フォームが開きます
           </p>
+
+          {/* 下部ビンテージ罫線 */}
+          <div className="vintage-double-rule mt-10" />
         </div>
       </div>
     </section>

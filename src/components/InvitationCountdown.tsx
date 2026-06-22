@@ -46,21 +46,14 @@ function CountCard({
       }}
     >
       <div
-        className="parchment-card relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center rounded-2xl overflow-hidden border-2 border-double border-[var(--color-gold)]/50"
-        style={{
-          boxShadow:
-            "0 10px 30px rgba(0,0,0,0.25), inset 0 0 16px rgba(74, 60, 49, 0.08), 0 0 0 1px rgba(200,148,28,0.15)",
-        }}
+        className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center border-b border-[var(--color-gold)]/60"
       >
-        <div
-          className="absolute left-0 right-0 h-[1px] top-1/2 -translate-y-1/2 opacity-25"
-          style={{ background: "var(--color-border)" }}
-        />
         <span
-          className="relative z-10 text-2xl sm:text-3xl md:text-4xl font-bold tabular-nums leading-none"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold tabular-nums leading-none tracking-wider"
           style={{
-            fontFamily: "var(--font-mincho)",
-            color: "var(--color-text-dark)",
+            fontFamily: "var(--font-vintage-serif)",
+            color: "var(--color-cream)",
+            textShadow: "0 0 20px rgba(200,148,28,0.4)",
           }}
         >
           {String(value).padStart(label === "Days" ? 3 : 2, "0")}

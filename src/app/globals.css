@@ -9,12 +9,12 @@
   --font-vintage-serif: "Cormorant Garamond", serif;
   --font-vintage-script: "Alex Brush", cursive;
 
-  /* ジブリ風喫茶店 カラーパレット */
-  --color-cream: #f4ede3;
-  --color-beige: #e3d5c3;
-  --color-beige-light: #f9f5ef;
-  --color-white: #fffef9;
-  --color-offwhite: #faf8f6;
+  /* ベースカラー - クリーンホワイト */
+  --color-cream: #ffffff;
+  --color-beige: #e8e5df;
+  --color-beige-light: #f5f4f2;
+  --color-white: #ffffff;
+  --color-offwhite: #fafaf9;
 
   /* アクセントカラー - ジブリ風 + エレガントアッシュローズ */
   --color-rose: #c8968e;
@@ -36,8 +36,8 @@
   --color-charcoal: #2c2c2c;
 
   /* ボーダー・装飾 */
-  --color-border: #ded2c0;
-  --color-border-light: #ede5d8;
+  --color-border: #dbd8d2;
+  --color-border-light: #eceae6;
   --color-gold: #c8941c;
   --color-gold-light: #e0b83c;
 
@@ -96,14 +96,14 @@
 body {
   background-color: var(--color-cream);
   background-image:
-    radial-gradient(ellipse at 50% 0%, rgba(200, 148, 28, 0.08) 0%, transparent 55%),
-    radial-gradient(ellipse at 100% 100%, rgba(196, 124, 42, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 0%, rgba(200, 148, 28, 0.04) 0%, transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(196, 124, 42, 0.025) 0%, transparent 50%),
     linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.42),
       rgba(244, 237, 227, 0.15)
     ),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.065'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.045'/%3E%3C/svg%3E");
   color: var(--color-text);
   font-family: var(--font-mincho), "Hiragino Mincho ProN", serif;
   font-size: 18px;
@@ -533,6 +533,61 @@ section {
   background: radial-gradient(ellipse at 50% 0%, rgba(200, 148, 28, 0.07) 0%, var(--color-beige-light) 38%, var(--color-cream) 100%);
   border: 1px solid var(--color-border);
   box-shadow: 0 4px 28px rgba(74, 60, 49, 0.1), inset 0 0 28px rgba(74, 60, 49, 0.04), 0 0 0 1px rgba(200, 148, 28, 0.09);
+}
+
+/* ========================
+   ビンテージ・エイジド ユーティリティ
+   ======================== */
+
+/* ビンテージ二重罫線ルール */
+.vintage-double-rule {
+  border: none;
+  height: 5px;
+  position: relative;
+  opacity: 0.55;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ビンテージグレイン オーバーレイ */
+.vintage-grain {
+  position: relative;
+}
+.vintage-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='0.09'/%3E%3C/svg%3E");
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+/* ビンテージスタンプ風装飾テキスト */
+.vintage-stamp-text {
+  display: inline-block;
+  font-family: var(--font-vintage-serif);
+  font-size: 0.6rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  padding: 3px 10px;
+  opacity: 0.55;
+  transform: rotate(-1deg);
+}
+
+/* ビンテージ新聞コラム区切り */
+.vintage-col-rule {
+  width: 1px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--color-border) 0px,
+    var(--color-border) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  opacity: 0.5;
 }
 
 /* 唐草模様・エレガント装飾デコレーション */
