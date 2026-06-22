@@ -29,7 +29,7 @@ export function InvitationMessage() {
     <section
       ref={ref}
       className="py-20 md:py-28 px-6 relative"
-      style={{ background: "var(--color-beige-light)" }}
+      style={{ background: "var(--color-cream)" }}
     >
       <div className="max-w-3xl mx-auto">
         {/* ヘッダー */}

@@ -45,10 +45,22 @@ export default function InvitationPage() {
         <InvitationRsvp />
       </main>
 
-      {/* フッター / テスト・動作確認用エリア */}
+      {/* フッター */}
       <footer className="py-12 bg-[var(--color-beige-light)] border-t border-[var(--color-border-light)] text-center font-mincho">
-        <p className="text-xs text-[var(--color-text-light)]">
-          © 2026 Naoto & Yui. All Rights Reserved.
+        <div
+          className="mb-4 text-[var(--color-gold)]"
+          style={{
+            fontFamily: "var(--font-vintage-serif)",
+            letterSpacing: "0.35em",
+            fontSize: "0.9rem",
+            opacity: 0.55,
+            textShadow: "0 0 10px rgba(200, 148, 28, 0.3)",
+          }}
+        >
+          — ✦ —
+        </div>
+        <p className="text-xs text-[var(--color-text-light)] tracking-widest">
+          © 2026 Naoto &amp; Yui. All Rights Reserved.
         </p>
       </footer>
     </div>

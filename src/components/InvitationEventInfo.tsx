@@ -12,9 +12,19 @@ export function InvitationEventInfo() {
       ref={ref}
       className="py-20 md:py-28 px-6 bg-[var(--color-cream)] relative"
     >
+      {/* 上部より流れる細線（Greetingと同一パターン） */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-12 bg-[var(--color-text-light)] opacity-30"></div>
       <div className="max-w-4xl mx-auto">
         <div className="section-header text-center mb-16">
-          <span className="magazine-label font-bold">Information</span>
+          <div className="decorative-line mb-4">
+            <span
+              className="text-sm tracking-[0.25em] uppercase text-[var(--color-text-light)] font-medium"
+              style={{ fontFamily: "var(--font-vintage-serif)" }}
+            >
+              Information
+            </span>
+          </div>
+          <div className="vintage-flourish mb-4">❦</div>
           <h2
             className="text-2xl md:text-3xl font-bold tracking-[0.2em] text-[var(--color-text-dark)] mt-2"
             style={{ fontFamily: "var(--font-mincho)" }}
@@ -130,7 +140,7 @@ export function InvitationEventInfo() {
               onClick={() => setActiveTab("train")}
               className={`px-4 sm:px-6 py-3 text-xs sm:text-sm font-bold font-mincho transition-all border-b-2 -mb-[2px] ${
                 activeTab === "train"
-                  ? "border-[var(--color-sage)] text-[var(--color-text-dark)]"
+                  ? "border-[var(--color-gold)] text-[var(--color-text-dark)]"
                   : "border-transparent text-[var(--color-text-light)] hover:text-[var(--color-text-dark)]"
               }`}
             >
@@ -140,7 +150,7 @@ export function InvitationEventInfo() {
               onClick={() => setActiveTab("taxi")}
               className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-bold font-mincho transition-all border-b-2 -mb-[2px] ${
                 activeTab === "taxi"
-                  ? "border-[var(--color-sage)] text-[var(--color-text-dark)]"
+                  ? "border-[var(--color-gold)] text-[var(--color-text-dark)]"
                   : "border-transparent text-[var(--color-text-light)] hover:text-[var(--color-text-dark)]"
               }`}
             >
@@ -150,7 +160,7 @@ export function InvitationEventInfo() {
               onClick={() => setActiveTab("car")}
               className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-bold font-mincho transition-all border-b-2 -mb-[2px] ${
                 activeTab === "car"
-                  ? "border-[var(--color-sage)] text-[var(--color-text-dark)]"
+                  ? "border-[var(--color-gold)] text-[var(--color-text-dark)]"
                   : "border-transparent text-[var(--color-text-light)] hover:text-[var(--color-text-dark)]"
               }`}
             >
@@ -240,7 +250,7 @@ export function InvitationEventInfo() {
             allowFullScreen={false}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-full grayscale-[20%] sepia-[10%] contrast-[0.95]"
+            className="w-full h-full grayscale-[30%] sepia-[20%] contrast-[0.93] brightness-[0.97]"
           ></iframe>
         </div>
       </div>

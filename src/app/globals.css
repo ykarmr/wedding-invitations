@@ -38,12 +38,19 @@
   /* ボーダー・装飾 */
   --color-border: #ded2c0;
   --color-border-light: #ede5d8;
-  --color-gold: #c9a86a;
-  --color-gold-light: #e0c598;
+  --color-gold: #c8941c;
+  --color-gold-light: #e0b83c;
 
   /* ジブリ風グリーン */
   --color-grass: #a5c882;
   --color-leaf: #8fae72;
+
+  /* シネマ・ロードムービー カラー */
+  --color-amber: #c87c2a;
+  --color-amber-light: #e8a84a;
+  --color-film-strip: #1c1810;
+  --color-burgundy: #6a2428;
+  --color-ivory: #f5ecd8;
 }
 
 @theme inline {
@@ -73,6 +80,11 @@
   --color-forest: var(--color-forest);
   --color-grass: var(--color-grass);
   --color-leaf: var(--color-leaf);
+  --color-amber: var(--color-amber);
+  --color-amber-light: var(--color-amber-light);
+  --color-film-strip: var(--color-film-strip);
+  --color-burgundy: var(--color-burgundy);
+  --color-ivory: var(--color-ivory);
   --font-sans: var(--font-rounded);
   --font-serif: var(--font-handwritten);
   --font-mincho: var(--font-mincho);
@@ -84,12 +96,14 @@
 body {
   background-color: var(--color-cream);
   background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(200, 148, 28, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(196, 124, 42, 0.05) 0%, transparent 50%),
     linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(244, 237, 227, 0.2)
+      rgba(255, 255, 255, 0.42),
+      rgba(244, 237, 227, 0.15)
     ),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.065'/%3E%3C/svg%3E");
   color: var(--color-text);
   font-family: var(--font-mincho), "Hiragino Mincho ProN", serif;
   font-size: 18px;
@@ -258,7 +272,7 @@ h6 {
 
 /* タグスタイル */
 .elegant-tag {
-  background: var(--color-sage);
+  background: var(--color-amber);
   color: white;
   padding: 0.25rem 0.875rem;
   font-weight: 500;
@@ -420,6 +434,19 @@ section {
   }
 }
 
+@keyframes filmFlicker {
+  0%, 87%, 100% { opacity: 1; }
+  89% { opacity: 0.97; }
+  92% { opacity: 1; }
+  95% { opacity: 0.975; }
+  97% { opacity: 1; }
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
 .animate-fade-in {
   animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -453,7 +480,7 @@ section {
   border: 4px double var(--color-border);
   padding: 8px;
   background-color: var(--color-white);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07), 0 2px 8px rgba(200, 148, 28, 0.12);
 }
 
 /* グラスモルフィズム風アースカラーカード */
@@ -503,9 +530,9 @@ section {
 
 /* 羊皮紙風カード */
 .parchment-card {
-  background: radial-gradient(circle, var(--color-beige-light) 0%, var(--color-cream) 100%);
+  background: radial-gradient(ellipse at 50% 0%, rgba(200, 148, 28, 0.07) 0%, var(--color-beige-light) 38%, var(--color-cream) 100%);
   border: 1px solid var(--color-border);
-  box-shadow: 0 4px 20px rgba(74, 60, 49, 0.08), inset 0 0 20px rgba(74, 60, 49, 0.04);
+  box-shadow: 0 4px 28px rgba(74, 60, 49, 0.1), inset 0 0 28px rgba(74, 60, 49, 0.04), 0 0 0 1px rgba(200, 148, 28, 0.09);
 }
 
 /* 唐草模様・エレガント装飾デコレーション */
@@ -516,7 +543,87 @@ section {
   text-align: center;
   margin: 1rem 0;
   letter-spacing: 0.3em;
-  opacity: 0.8;
+  opacity: 1;
+  text-shadow: 0 0 14px rgba(200, 148, 28, 0.45);
+}
+
+/* ========================
+   シネマ・ロードムービー ユーティリティ
+   ======================== */
+
+/* フィルムストリップ パーフォレーション バー */
+.film-strip-bar {
+  height: 18px;
+  flex-shrink: 0;
+  background: #1a1208;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #1a1208 0 9px,
+    rgba(210, 170, 80, 0.16) 9px 21px,
+    #1a1208 21px 30px
+  );
+  background-size: 30px 18px;
+}
+
+/* シネマ ヴィネット（周辺光量落ち） */
+.cinema-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 48%,
+    rgba(6, 4, 2, 0.42) 100%
+  );
+}
+
+/* ロードムービー風 ロケーションスタンプ */
+.location-stamp {
+  font-family: var(--font-vintage-serif);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 4px 10px;
+  line-height: 1.7;
+  backdrop-filter: blur(3px);
+}
+
+/* ゴールドシマー テキスト */
+.gold-shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--color-gold) 0%,
+    var(--color-gold-light) 35%,
+    #f2d060 55%,
+    var(--color-gold-light) 70%,
+    var(--color-gold) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 4s linear infinite;
+}
+
+/* ロードムービー風 センター区切り線 */
+.road-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-text-light);
+  font-family: var(--font-vintage-serif);
+  font-size: 9px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+.road-divider::before,
+.road-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
 }
 
 /* 印刷用スタイル - 専用コンポーネント用 */

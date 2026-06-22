@@ -46,10 +46,10 @@ function CountCard({
       }}
     >
       <div
-        className="parchment-card relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center rounded-2xl overflow-hidden border-2 border-double border-[var(--color-gold)]/40"
+        className="parchment-card relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center rounded-2xl overflow-hidden border-2 border-double border-[var(--color-gold)]/50"
         style={{
           boxShadow:
-            "0 10px 25px rgba(74, 60, 49, 0.12), inset 0 0 12px rgba(74, 60, 49, 0.05)",
+            "0 10px 30px rgba(0,0,0,0.25), inset 0 0 16px rgba(74, 60, 49, 0.08), 0 0 0 1px rgba(200,148,28,0.15)",
         }}
       >
         <div
@@ -101,11 +101,17 @@ export function InvitationCountdown() {
         <img
           src={updateEnvPath("/images/invitation_cover.jpg")}
           alt="Wedding Backdrop"
-          className="w-full h-full object-cover filter sepia-[0.3] contrast-[0.9] brightness-[0.8]"
+          className="w-full h-full object-cover filter sepia-[0.4] contrast-[1.05] brightness-[0.72]"
         />
-        {/* ダークシネマティックオーバーレイ */}
-        <div className="absolute inset-0 bg-black/45 mix-blend-multiply"></div>
+        {/* シネマティックオーバーレイ */}
+        <div className="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
+        {/* ヴィネット */}
+        <div className="cinema-vignette" />
       </div>
+      {/* フィルムストリップバー（上） */}
+      <div className="absolute top-0 left-0 right-0 film-strip-bar z-10" />
+      {/* フィルムストリップバー（下） */}
+      <div className="absolute bottom-0 left-0 right-0 film-strip-bar z-10" />
 
       <div className="max-w-2xl mx-auto relative z-10 text-center">
         {/* ヘッダー */}

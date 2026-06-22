@@ -15,11 +15,15 @@ export function InvitationGallery() {
   return (
     <section
       ref={ref}
-      className="py-16 md:py-24 px-4 md:px-6 bg-[var(--color-white)] relative overflow-hidden"
+      className="py-16 md:py-24 px-4 md:px-6 bg-[var(--color-cream)] relative overflow-hidden"
     >
+      {/* 下面のカウントダウン（ダーク）へのグラデーションフェード */}
+      <div className="absolute bottom-0 left-0 right-0 h-10 pointer-events-none"
+        style={{ background: 'linear-gradient(to bottom, transparent, rgba(6,4,2,0.04))' }} />
       <div className="max-w-4xl mx-auto">
         <div className="section-header">
           <span className="magazine-label">Gallery</span>
+          <div className="vintage-flourish text-base opacity-70 my-2">— ✦ —</div>
           <h2
             className="section-title text-2xl md:text-4xl"
             style={{ fontFamily: "var(--font-yomogi)" }}
@@ -37,13 +41,14 @@ export function InvitationGallery() {
           {photos.map((photo, i) => (
             <div
               key={i}
-              className="bg-[var(--color-white)] p-3 shadow-md border border-[var(--color-border-light)] transform hover:shadow-xl transition-all duration-300 rotate-[-0.5deg] odd:rotate-[0.5deg]"
+              className="bg-[var(--color-ivory,#f5ecd8)] p-3 shadow-lg border border-[var(--color-border)] transform hover:shadow-2xl transition-all duration-300 rotate-[-0.5deg] odd:rotate-[0.5deg] hover:rotate-0"
+              style={{ boxShadow: '0 8px 24px rgba(0,0,0,0.12), 0 2px 6px rgba(200,148,28,0.08)' }}
             >
               <div className="relative aspect-[4/5] overflow-hidden bg-gray-100">
                 <img
                   src={updateEnvPath(photo.src)}
                   alt={photo.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105 grayscale-[10%] hover:grayscale-0"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105 vintage-photo"
                 />
               </div>
             </div>

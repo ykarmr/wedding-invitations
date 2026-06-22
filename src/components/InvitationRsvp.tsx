@@ -13,10 +13,13 @@ export function InvitationRsvp() {
       ref={ref}
       className="py-20 md:py-28 px-6 bg-[var(--color-cream)] relative overflow-hidden"
     >
+      {/* 上部より流れる細線 */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-12 bg-[var(--color-text-light)] opacity-30"></div>
       <div className="max-w-xl mx-auto relative z-10">
         {/* セクションヘッダー */}
         <div className="section-header">
           <span className="magazine-label">RSVP</span>
+          <div className="vintage-flourish text-xl my-1" style={{ opacity: 0.75 }}>❦</div>
           <h2
             className="section-title text-2xl md:text-4xl"
             style={{ fontFamily: "var(--font-yomogi)" }}
@@ -41,7 +44,7 @@ export function InvitationRsvp() {
 
         {/* カード */}
         <div
-          className={`antique-border rounded-xl p-8 sm:p-12 text-center space-y-8 transition-all duration-1000 transform ${
+          className={`parchment-card antique-border rounded-xl p-8 sm:p-12 text-center space-y-8 transition-all duration-1000 transform ${
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >

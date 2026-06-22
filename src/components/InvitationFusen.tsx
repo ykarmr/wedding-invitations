@@ -49,7 +49,7 @@ export function InvitationFusen() {
   return (
     <section
       ref={ref}
-      className="py-12 px-6 bg-[var(--color-beige-light)] relative overflow-hidden"
+      className="py-12 px-6 bg-[var(--color-cream)] relative overflow-hidden"
     >
       <div className="max-w-md mx-auto">
         {/* 滑り出すような紙風のアニメーションカード */}

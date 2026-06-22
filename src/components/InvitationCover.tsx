@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "@/hooks/useInView";
 import updateEnvPath from "@/utils/updateEnvPath";
 
@@ -32,7 +32,9 @@ export function InvitationCover() {
           <div
             key={src}
             className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-[2000ms] ease-in-out ${
-              index === currentIdx ? "opacity-100 scale-100" : "opacity-0 scale-105"
+              index === currentIdx
+                ? "opacity-100 scale-100"
+                : "opacity-0 scale-105"
             }`}
             style={{
               backgroundImage: `url(${updateEnvPath(src)})`,
@@ -42,8 +44,11 @@ export function InvitationCover() {
         ))}
       </div>
 
-      {/* テキスト視認性を高めるための上品なオーバーレイレイヤー */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/55 z-0 pointer-events-none" />
+      {/* テキスト視認性を高めるためのシネマティックオーバーレイ */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/52 via-black/18 to-black/62 z-0 pointer-events-none" />
+
+      {/* シネマ ヴィネット（周辺光量落ち） */}
+      <div className="cinema-vignette z-0" />
 
       {/* 紙のテクスチャ背景をオーバーレイして上品さをプラス */}
       <div
@@ -53,6 +58,17 @@ export function InvitationCover() {
         }}
       />
 
+      {/* シネマ レターボックス バー（上） */}
+      <div
+        className="absolute top-0 left-0 right-0 z-20 pointer-events-none"
+        style={{ height: 'clamp(24px, 4vh, 48px)', background: 'rgb(6, 4, 2)' }}
+      />
+      {/* シネマ レターボックス バー（下） */}
+      <div
+        className="absolute bottom-0 left-0 right-0 z-20 pointer-events-none"
+        style={{ height: 'clamp(24px, 4vh, 48px)', background: 'rgb(6, 4, 2)' }}
+      />
+
       {/* エレガントなヴィンテージ金枠線 */}
       <div className="absolute inset-4 sm:inset-6 md:inset-8 border border-[var(--color-gold)]/30 z-0 pointer-events-none" />
       <div className="absolute inset-5 sm:inset-7 md:inset-9 border-2 border-double border-[var(--color-gold)]/20 z-0 pointer-events-none" />
@@ -60,13 +76,13 @@ export function InvitationCover() {
       {/* トップヘッダー */}
       <div className="w-full max-w-5xl flex justify-between items-end z-10 pt-4 px-2 select-none">
         <div className="flex flex-col items-start gap-1">
-          <span 
+          <span
             className="text-xs sm:text-sm tracking-[0.25em] uppercase text-white/80 drop-shadow-md"
             style={{ fontFamily: "var(--font-vintage-serif)" }}
           >
             Our Wedding
           </span>
-          <span 
+          <span
             className="text-sm sm:text-base font-medium tracking-widest border-b border-[var(--color-gold)]/60 pb-0.5 text-white drop-shadow-md"
             style={{ fontFamily: "var(--font-vintage-serif)" }}
           >
@@ -74,13 +90,13 @@ export function InvitationCover() {
           </span>
         </div>
         <div className="flex flex-col items-end gap-1">
-          <span 
+          <span
             className="text-xs sm:text-sm tracking-[0.25em] text-white/80 uppercase drop-shadow-md"
             style={{ fontFamily: "var(--font-vintage-serif)" }}
           >
             Invitation
           </span>
-          <span 
+          <span
             className="text-sm sm:text-base font-medium tracking-widest text-white drop-shadow-md"
             style={{ fontFamily: "var(--font-vintage-serif)" }}
           >
@@ -95,23 +111,23 @@ export function InvitationCover() {
           isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <div 
+        <div
           className="mb-2 text-3xl sm:text-5xl text-[var(--color-gold-light)] drop-shadow-[0_1.5px_4px_rgba(0,0,0,0.6)]"
           style={{ fontFamily: "var(--font-vintage-script)" }}
         >
           Save the Date
         </div>
-        
+
         <h1
           className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-[0.25em] text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] mb-6 select-none leading-snug"
           style={{ fontFamily: "var(--font-mincho)" }}
         >
-          結婚式のご案内
+          Wedding Invitation
         </h1>
 
         <div className="w-20 h-[1px] bg-[var(--color-gold-light)]/60 mb-6 drop-shadow-md" />
 
-        <div 
+        <div
           className="text-4xl sm:text-6xl text-[var(--color-gold-light)] drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
           style={{ fontFamily: "var(--font-vintage-script)" }}
         >
@@ -120,21 +136,40 @@ export function InvitationCover() {
       </div>
 
       {/* ボトムセクションとスクロール促し */}
-      <div className="w-full flex flex-col items-center gap-3 z-10 pb-4 select-none">
-        <div 
-          className="text-xs sm:text-sm tracking-[0.3em] uppercase text-white/90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]"
-          style={{ fontFamily: "var(--font-vintage-serif)" }}
-        >
-          Welcome to Our Special Day
+      <div className="w-full flex flex-row items-end justify-between z-10 pb-4 px-3 select-none">
+        {/* 左：ロケーションスタンプ */}
+        <div className="location-stamp hidden sm:flex flex-col">
+          <span>Ichigaya &middot; Tokyo</span>
+          <span className="text-[7px] opacity-50 tracking-[0.22em] mt-0.5">
+            Applause Square
+          </span>
         </div>
-        <div className="flex flex-col items-center gap-2 opacity-80 mt-2">
-          <span 
-            className="text-[10px] tracking-[0.4em] uppercase font-bold animate-shimmer text-white drop-shadow-[0_1.5px_4px_rgba(0,0,0,0.6)]"
+
+        {/* 中央：スクロール誤導 */}
+        <div className="flex flex-col items-center gap-3 flex-1">
+          <div
+            className="text-xs sm:text-sm tracking-[0.3em] uppercase text-white/90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]"
             style={{ fontFamily: "var(--font-vintage-serif)" }}
           >
-            Scroll Down
+            Welcome to Our Special Day
+          </div>
+          <div className="flex flex-col items-center gap-2 opacity-80 mt-2">
+            <span
+              className="text-[10px] tracking-[0.4em] uppercase font-bold animate-shimmer text-white drop-shadow-[0_1.5px_4px_rgba(0,0,0,0.6)]"
+              style={{ fontFamily: "var(--font-vintage-serif)" }}
+            >
+              Scroll Down
+            </span>
+            <div className="w-[1px] h-10 bg-[var(--color-gold-light)]/70 origin-top animate-pulse-soft"></div>
+          </div>
+        </div>
+
+        {/* 右：日付スタンプ */}
+        <div className="location-stamp hidden sm:flex flex-col items-end text-right">
+          <span>2026 &middot; X &middot; XXIV</span>
+          <span className="text-[7px] opacity-50 tracking-[0.22em] mt-0.5">
+            挙式 ・ 披露孴
           </span>
-          <div className="w-[1px] h-10 bg-[var(--color-gold-light)]/70 origin-top animate-pulse-soft"></div>
         </div>
       </div>
     </section>
