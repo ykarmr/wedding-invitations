@@ -22,9 +22,9 @@ export function InvitationRsvp() {
           <div className="vintage-flourish text-xl my-1" style={{ opacity: 0.75 }}>❦</div>
           <h2
             className="section-title text-2xl md:text-4xl"
-            style={{ fontFamily: "var(--font-yomogi)" }}
+            style={{ fontFamily: "var(--font-vintage-serif)" }}
           >
-            ご出欠のご回答
+            RSVP
           </h2>
         </div>
 

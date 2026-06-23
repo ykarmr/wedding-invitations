@@ -126,9 +126,9 @@ export function InvitationCountdown() {
           <div className="vintage-flourish mb-6 text-[var(--color-gold-light)]">❦</div>
           <h2
             className="text-3xl md:text-4xl font-bold mb-4 tracking-[0.2em] text-[var(--color-cream)]"
-            style={{ fontFamily: "var(--font-mincho)" }}
+            style={{ fontFamily: "var(--font-vintage-serif)" }}
           >
-            挙式まであと
+            Counting Down
           </h2>
           <p
             className="text-xs tracking-[0.2em] text-white/80 font-bold"

@@ -32,13 +32,11 @@ export function InvitationCover() {
           <div
             key={src}
             className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-[2000ms] ease-in-out ${
-              index === currentIdx
-                ? "opacity-100 scale-100"
-                : "opacity-0 scale-105"
+              index === currentIdx ? "opacity-100" : "opacity-0"
             }`}
             style={{
               backgroundImage: `url(${updateEnvPath(src)})`,
-              transitionProperty: "opacity, transform",
+              transitionProperty: "opacity",
             }}
           />
         ))}

@@ -27,9 +27,9 @@ export function InvitationEventInfo() {
           <div className="vintage-flourish mb-4">❦</div>
           <h2
             className="text-2xl md:text-3xl font-bold tracking-[0.2em] text-[var(--color-text-dark)] mt-2"
-            style={{ fontFamily: "var(--font-mincho)" }}
+            style={{ fontFamily: "var(--font-vintage-serif)" }}
           >
-            日時と場所
+            Schedule & Venue
           </h2>
         </div>
 
@@ -43,8 +43,8 @@ export function InvitationEventInfo() {
           <div className="border-t-4 border-double border-[var(--color-border)] pt-8 sm:pt-10 flex flex-col justify-between">
             <div>
               <span className="pink-tag mb-4 inline-block font-bold">WHEN</span>
-              <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-6 font-mincho">
-                日時
+              <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-6" style={{ fontFamily: "var(--font-vintage-serif)" }}>
+                Date & Time
               </h3>
               <div className="space-y-6 font-mincho text-[var(--color-text)] tracking-wider">
                 <div>
@@ -88,8 +88,8 @@ export function InvitationEventInfo() {
           <div className="border-t-4 border-double border-[var(--color-border)] pt-8 sm:pt-10 flex flex-col justify-between">
             <div>
               <span className="elegant-tag mb-4 inline-block font-bold">WHERE</span>
-              <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-6 font-mincho">
-                場所
+              <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-6" style={{ fontFamily: "var(--font-vintage-serif)" }}>
+                Venue
               </h3>
               <div className="space-y-6 font-mincho text-[var(--color-text)] tracking-wider">
                 <div>
@@ -130,8 +130,8 @@ export function InvitationEventInfo() {
 
         {/* アクセスタブ */}
         <div className="mt-16 border-t-4 border-double border-[var(--color-border)] pt-10">
-          <h3 className="text-center font-bold font-mincho text-[var(--color-text-dark)] mb-6 text-sm sm:text-base md:text-lg tracking-widest">
-            ● アクセス方法 ●
+          <h3 className="text-center font-bold text-[var(--color-text-dark)] mb-6 text-sm sm:text-base md:text-lg tracking-widest" style={{ fontFamily: "var(--font-vintage-serif)" }}>
+            — Access —
           </h3>
 
           {/* タブ切り替えボタン */}

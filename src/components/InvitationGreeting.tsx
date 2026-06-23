@@ -36,9 +36,9 @@ export function InvitationGreeting() {
 
           <h2
             className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-10 tracking-[0.2em]"
-            style={{ fontFamily: "var(--font-mincho)" }}
+            style={{ fontFamily: "var(--font-vintage-serif)" }}
           >
-            ご挨拶
+            Greetings
           </h2>
 
           {/* 招待状本文 (句読点なし、忌み言葉なしマナー準守) */}

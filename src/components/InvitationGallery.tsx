@@ -64,9 +64,9 @@ export function InvitationGallery() {
         </div>
         <h2
           className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[0.2em] text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]"
-          style={{ fontFamily: "var(--font-mincho)" }}
+          style={{ fontFamily: "var(--font-vintage-serif)" }}
         >
-          フォトギャラリー
+          Photo Gallery
         </h2>
         <p
           className="mt-4 text-xs tracking-[0.38em] text-white/45"
