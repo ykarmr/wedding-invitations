@@ -2,8 +2,8 @@
 
 import { useInView } from "@/hooks/useInView";
 
-const GOOGLE_FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSc6Ev_QS6TdrTPtCFPGcqB__bv3nu1ts2ike1n0mFjorbLkkQ/viewform";
+const PIARY_RSVP_URL =
+  "https://www.piary.jp/web_invitation/3MtOZCmyeudnJQewk10ptZJr/reply";
 
 export function InvitationRsvp() {
   const { ref, isInView } = useInView();
@@ -71,13 +71,13 @@ export function InvitationRsvp() {
               ご回答フォームへお進みください。
             </p>
             <p className="text-xs text-[var(--color-text-light)]">
-              ご回答はGoogle フォームにて承っております。
+              ご回答はPiaryにて承っております。
             </p>
           </div>
 
           {/* リンクボタン */}
           <a
-            href={GOOGLE_FORM_URL}
+            href={PIARY_RSVP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block w-full max-w-xs py-4 px-8 rounded-xl font-bold tracking-widest text-white bg-[var(--color-sage-dark)] hover:bg-[var(--color-forest)] shadow-md border-2 border-[var(--color-border)] transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 font-mincho"
@@ -103,7 +103,7 @@ export function InvitationRsvp() {
 
           {/* 補足 */}
           <p className="text-[10px] sm:text-xs text-[var(--color-text-light)] font-mincho">
-            ※ 別ウィンドウでGoogle フォームが開きます
+            ※ 別ウィンドウでPiaryが開きます
           </p>
 
           {/* 下部ビンテージ罫線 */}
