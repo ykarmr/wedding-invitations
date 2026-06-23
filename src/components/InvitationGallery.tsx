@@ -15,7 +15,7 @@ export function InvitationGallery() {
   return (
     <section
       ref={ref}
-      className="relative w-full overflow-hidden bg-black py-16 md:py-24 px-6 md:px-12"
+      className="relative w-full overflow-hidden bg-black py-20 md:py-28 px-6 md:px-12"
     >
       {/* ノイズテクスチャ */}
       <div
@@ -42,7 +42,7 @@ export function InvitationGallery() {
 
       {/* セクションヘッダー */}
       <div
-        className="relative z-10 text-center mb-10 md:mb-14 transition-all duration-700"
+        className="relative z-10 text-center mb-12 md:mb-16 transition-all duration-700"
         style={{
           opacity: isInView ? 1 : 0,
           transform: isInView ? "translateY(0)" : "translateY(16px)",

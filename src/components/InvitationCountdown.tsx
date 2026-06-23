@@ -109,7 +109,7 @@ export function InvitationCountdown() {
       <div className="max-w-2xl mx-auto relative z-10 text-center">
         {/* ヘッダー */}
         <div
-          className="mb-12 transition-all duration-700"
+          className="mb-14 transition-all duration-700"
           style={{
             opacity: isInView ? 1 : 0,
             transform: isInView ? "translateY(0)" : "translateY(16px)",
@@ -125,7 +125,7 @@ export function InvitationCountdown() {
           </div>
           <div className="vintage-flourish mb-6 text-[var(--color-gold-light)]">❦</div>
           <h2
-            className="text-3xl md:text-4xl font-bold mb-4 tracking-[0.2em] text-[var(--color-cream)]"
+            className="text-3xl md:text-4xl font-bold mb-5 tracking-[0.2em] text-[var(--color-cream)]"
             style={{ fontFamily: "var(--font-vintage-serif)" }}
           >
             Counting Down

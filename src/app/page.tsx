@@ -46,7 +46,7 @@ export default function InvitationPage() {
       </main>
 
       {/* フッター */}
-      <footer className="py-12 bg-[var(--color-beige-light)] border-t border-[var(--color-border-light)] text-center font-mincho">
+      <footer className="py-14 bg-[var(--color-beige-light)] border-t border-[var(--color-border-light)] text-center font-mincho">
         <div
           className="mb-4 text-[var(--color-gold)]"
           style={{
@@ -60,7 +60,7 @@ export default function InvitationPage() {
           — ✦ —
         </div>
         <p className="text-xs text-[var(--color-text-light)] tracking-widest">
-          © 2026 Naoto &amp; Yui. All Rights Reserved.
+          © 2026 Yuki &amp; Sayaka. All Rights Reserved.
         </p>
       </footer>
     </div>

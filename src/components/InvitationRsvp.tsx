@@ -11,8 +11,18 @@ export function InvitationRsvp() {
   return (
     <section
       ref={ref}
-      className="py-20 md:py-28 px-6 bg-[var(--color-cream)] relative overflow-hidden"
+      className="py-24 md:py-32 px-6 relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, #f8f5f0 0%, #faf7f4 30%, #fdf9f6 60%, #faf7f3 100%)',
+      }}
     >
+      {/* レースパターン */}
+      <div className="pattern-lace" />
+      {/* コーナーオーナメント */}
+      <div className="corner-ornament" />
+      {/* ゴールドインナーフレーム */}
+      <div className="luxury-inner-frame" />
+
       {/* 上部より流れる細線 */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-12 bg-[var(--color-text-light)] opacity-30"></div>
       <div className="max-w-xl mx-auto relative z-10">
@@ -29,7 +39,7 @@ export function InvitationRsvp() {
         </div>
 
         {/* 回答締め切り */}
-        <div className="text-center mb-12 font-mincho">
+        <div className="text-center mb-10 font-mincho">
           <p className="text-xs sm:text-sm md:text-base text-[var(--color-text-dark)] tracking-wider leading-loose">
             お手数ではございますが 準備の都合上
             <br />
@@ -51,12 +61,14 @@ export function InvitationRsvp() {
           {/* 上部ビンテージ罫線 */}
           <div className="vintage-double-rule mb-10" />
           {/* アイコン */}
-          <div className="text-5xl">🕊️</div>
+          <div className="text-4xl sm:text-5xl">🕊️</div>
 
           {/* 本文 */}
           <div className="font-mincho space-y-3 text-[var(--color-text)] leading-relaxed text-sm sm:text-base">
             <p className="font-bold">
-              以下のボタンよりご回答フォームへお進みください。
+              以下のボタンより
+              <br />
+              ご回答フォームへお進みください。
             </p>
             <p className="text-xs text-[var(--color-text-light)]">
               ご回答はGoogle フォームにて承っております。

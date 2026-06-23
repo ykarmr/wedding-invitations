@@ -26,10 +26,19 @@ export function InvitationMessage() {
   const { ref, isInView } = useInView();
 
   return (
-    <section ref={ref} className="relative overflow-hidden bg-white">
+    <section
+      ref={ref}
+      className="relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, #ffffff 0%, #fdf9f7 35%, #faf5f2 65%, #ffffff 100%)',
+      }}
+    >
+      {/* アール・デコ調パターン */}
+      <div className="pattern-art-deco" />
+
       {/* セクションヘッダー */}
       <div
-        className="py-20 md:py-24 px-6 text-center"
+        className="py-16 md:py-20 px-6 text-center relative z-10"
         style={{
           opacity: isInView ? 1 : 0,
           transform: isInView ? "translateY(0)" : "translateY(16px)",
@@ -88,7 +97,7 @@ export function InvitationMessage() {
             </div>
 
             {/* テキストエリア */}
-            <div className="flex-1 flex flex-col justify-center px-8 sm:px-12 md:px-14 lg:px-20 py-14 md:py-0 bg-white">
+            <div className="flex-1 flex flex-col justify-center px-8 sm:px-12 md:px-14 lg:px-20 py-12 md:py-0 relative z-10" style={{ background: 'inherit' }}>
               {/* ロールラベル */}
               <p
                 className="text-[10px] tracking-[0.52em] uppercase text-[var(--color-gold)] mb-5 font-bold"

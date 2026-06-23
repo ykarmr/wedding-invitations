@@ -603,6 +603,120 @@ section {
 }
 
 /* ========================
+   高級装飾パターン ユーティリティ
+   ======================== */
+
+/* ダマスク調パターン（ゴールド） - Greetingセクション用 */
+.pattern-damask {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23c8941c' fill-rule='evenodd'%3E%3Cpath d='M40 0c2.2 8-2 16-8 20 6 4 10.2 12 8 20 2.2-8 8-16 8-20-6-4-10.2-12-8-20z' opacity='0.6'/%3E%3Cpath d='M0 40c8 2.2 16-2 20-8 4 6 12 10.2 20 8-8 2.2-16 8-20 8-4-6-12-10.2-20-8z' opacity='0.6'/%3E%3Ccircle cx='40' cy='40' r='3' opacity='0.4'/%3E%3Ccircle cx='0' cy='0' r='2' opacity='0.3'/%3E%3Ccircle cx='80' cy='0' r='2' opacity='0.3'/%3E%3Ccircle cx='0' cy='80' r='2' opacity='0.3'/%3E%3Ccircle cx='80' cy='80' r='2' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+  mix-blend-mode: multiply;
+}
+
+/* アール・デコ調ダイヤモンドパターン - Messageセクション用 */
+.pattern-art-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23c8941c' stroke-width='0.5' opacity='0.8'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3Cpath d='M30 10L50 30L30 50L10 30Z'/%3E%3Ccircle cx='30' cy='30' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 60px 60px;
+  mix-blend-mode: multiply;
+}
+
+/* フルール・ド・リス調パターン - EventInfoセクション用 */
+.pattern-fleur {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%23917444' opacity='0.7'%3E%3Cpath d='M50 15c-2 8-8 14-8 14s6 6 8 14c2-8 8-14 8-14s-6-6-8-14z'/%3E%3Cpath d='M50 57c-2 8-8 14-8 14s6 6 8 14c2-8 8-14 8-14s-6-6-8-14z'/%3E%3Cpath d='M15 50c8-2 14-8 14-8s6 6 14 8c-8 2-14 8-14 8s-6-6-14-8z'/%3E%3Cpath d='M57 50c8-2 14-8 14-8s6 6 14 8c-8 2-14 8-14 8s-6-6-14-8z'/%3E%3Ccircle cx='50' cy='50' r='2.5'/%3E%3Ccircle cx='0' cy='0' r='2.5'/%3E%3Ccircle cx='100' cy='0' r='2.5'/%3E%3Ccircle cx='0' cy='100' r='2.5'/%3E%3Ccircle cx='100' cy='100' r='2.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 100px 100px;
+  mix-blend-mode: multiply;
+}
+
+/* レースパターン - RSVPセクション用 */
+.pattern-lace {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23b8963c' stroke-width='0.4' opacity='0.8'%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3Ccircle cx='40' cy='40' r='4'/%3E%3Cpath d='M40 20 Q50 30 40 40 Q30 30 40 20'/%3E%3Cpath d='M60 40 Q50 50 40 40 Q50 30 60 40'/%3E%3Cpath d='M40 60 Q30 50 40 40 Q50 50 40 60'/%3E%3Cpath d='M20 40 Q30 30 40 40 Q30 50 20 40'/%3E%3C/g%3E%3Cg fill='%23b8963c' opacity='0.3'%3E%3Ccircle cx='0' cy='0' r='3'/%3E%3Ccircle cx='80' cy='0' r='3'/%3E%3Ccircle cx='0' cy='80' r='3'/%3E%3Ccircle cx='80' cy='80' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+  mix-blend-mode: multiply;
+}
+
+/* コーナーオーナメント（四隅装飾） */
+.corner-ornament {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.corner-ornament::before,
+.corner-ornament::after {
+  content: '❧';
+  position: absolute;
+  font-size: 2rem;
+  color: var(--color-gold);
+  opacity: 0.12;
+  font-family: var(--font-vintage-serif);
+}
+.corner-ornament::before {
+  top: 1.5rem;
+  left: 1.5rem;
+  transform: rotate(0deg);
+}
+.corner-ornament::after {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  transform: rotate(180deg);
+}
+
+/* 繊細なゴールドボーダーフレーム */
+.luxury-inner-frame {
+  position: absolute;
+  pointer-events: none;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  border: 1px solid rgba(200, 148, 28, 0.08);
+}
+.luxury-inner-frame::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid rgba(200, 148, 28, 0.05);
+}
+
+@media (min-width: 640px) {
+  .corner-ornament::before {
+    top: 2rem;
+    left: 2rem;
+    font-size: 2.5rem;
+  }
+  .corner-ornament::after {
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 2.5rem;
+  }
+  .luxury-inner-frame {
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+  }
+}
+
+/* ========================
    シネマ・ロードムービー ユーティリティ
    ======================== */
 

@@ -8,20 +8,30 @@ export function InvitationGreeting() {
   return (
     <section
       ref={ref}
-      className="py-20 md:py-28 px-6 bg-[var(--color-cream)] text-center relative"
+      className="py-24 md:py-32 px-6 text-center relative"
+      style={{
+        background: 'linear-gradient(180deg, #faf8f5 0%, #ffffff 40%, #faf7f3 100%)',
+      }}
     >
+      {/* ダマスク調パターン */}
+      <div className="pattern-damask" />
+      {/* コーナーオーナメント */}
+      <div className="corner-ornament" />
+      {/* ゴールドインナーフレーム */}
+      <div className="luxury-inner-frame" />
+
       {/* 雑誌風装飾ライン */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-12 bg-[var(--color-text-light)] opacity-30"></div>
 
       <div
-        className={`max-w-2xl mx-auto transition-all duration-1000 transform ${
+        className={`max-w-2xl mx-auto relative z-10 transition-all duration-1000 transform ${
           isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
         {/* 外枠をカードから解放、ビンテージ二重罫線でフレームに */}
         <div className="relative py-4">
           {/* 上部の二重罫線 */}
-          <div className="vintage-double-rule mb-12" />
+          <div className="vintage-double-rule mb-10" />
 
           <div className="decorative-line mb-4">
             <span 
@@ -35,7 +45,7 @@ export function InvitationGreeting() {
           <div className="vintage-flourish mb-6">❦</div>
 
           <h2
-            className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-10 tracking-[0.2em]"
+            className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-8 tracking-[0.2em]"
             style={{ fontFamily: "var(--font-vintage-serif)" }}
           >
             Greetings

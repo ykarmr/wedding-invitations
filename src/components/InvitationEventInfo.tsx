@@ -10,12 +10,22 @@ export function InvitationEventInfo() {
   return (
     <section
       ref={ref}
-      className="py-20 md:py-28 px-6 bg-[var(--color-cream)] relative"
+      className="py-24 md:py-32 px-6 relative"
+      style={{
+        background: 'linear-gradient(180deg, #faf8f4 0%, #f7f5f0 30%, #f5f3ee 60%, #f8f6f2 100%)',
+      }}
     >
+      {/* フルール・ド・リス調パターン */}
+      <div className="pattern-fleur" />
+      {/* コーナーオーナメント */}
+      <div className="corner-ornament" />
+      {/* ゴールドインナーフレーム */}
+      <div className="luxury-inner-frame" />
+
       {/* 上部より流れる細線（Greetingと同一パターン） */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-12 bg-[var(--color-text-light)] opacity-30"></div>
-      <div className="max-w-4xl mx-auto">
-        <div className="section-header text-center mb-16">
+      <div className="max-w-4xl mx-auto relative z-10">
+        <div className="section-header text-center mb-14">
           <div className="decorative-line mb-4">
             <span
               className="text-sm tracking-[0.25em] uppercase text-[var(--color-text-light)] font-medium"
@@ -241,7 +251,7 @@ export function InvitationEventInfo() {
         </div>
 
         {/* Google Map 埋め込み (スクロールフェードイン) */}
-        <div className="mt-12 overflow-hidden shadow-md border border-[var(--color-border)] rounded-2xl relative aspect-[16/9]">
+        <div className="mt-14 overflow-hidden shadow-lg border border-[var(--color-border)] rounded-xl relative aspect-[16/9]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.2945910855424!2d139.72381339999998!3d35.6943676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cf04d9a4da3%3A0xdcfb22b832132324!2z44Ki44OX44Ot44O844K644K544Kv44Ko44KiIOadseS6rOi_juizk-mkqA!5e0!3m2!1sja!2sjp!4v1780656639251!5m2!1sja!2sjp"
             width="100%"
