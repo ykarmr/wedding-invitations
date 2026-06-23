@@ -58,7 +58,10 @@ export function InvitationGallery() {
         </div>
         <div
           className="text-xl text-[var(--color-gold-light)] mb-4"
-          style={{ fontFamily: "var(--font-vintage-serif)", letterSpacing: "0.3em" }}
+          style={{
+            fontFamily: "var(--font-vintage-serif)",
+            letterSpacing: "0.3em",
+          }}
         >
           ❦
         </div>
@@ -84,7 +87,10 @@ export function InvitationGallery() {
         style={{ transitionDelay: "150ms" }}
       >
         {photos.map((photo) => (
-          <div key={photo.src} className="relative aspect-[4/5] overflow-hidden bg-black/40">
+          <div
+            key={photo.src}
+            className="relative aspect-[4/5] overflow-hidden bg-black/40"
+          >
             <img
               src={updateEnvPath(photo.src)}
               alt={photo.alt}

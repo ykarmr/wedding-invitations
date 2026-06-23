@@ -51,7 +51,8 @@ export function InvitationFusen() {
       ref={ref}
       className="py-16 md:py-20 px-6 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(180deg, #ffffff 0%, #fcf9f5 40%, #faf6f1 70%, #ffffff 100%)',
+        background:
+          "linear-gradient(180deg, #ffffff 0%, #fcf9f5 40%, #faf6f1 70%, #ffffff 100%)",
       }}
     >
       <div className="max-w-md mx-auto">

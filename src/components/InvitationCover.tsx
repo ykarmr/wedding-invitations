@@ -59,12 +59,12 @@ export function InvitationCover() {
       {/* シネマ レターボックス バー（上） */}
       <div
         className="absolute top-0 left-0 right-0 z-20 pointer-events-none"
-        style={{ height: 'clamp(24px, 4vh, 48px)', background: 'rgb(6, 4, 2)' }}
+        style={{ height: "clamp(24px, 4vh, 48px)", background: "rgb(6, 4, 2)" }}
       />
       {/* シネマ レターボックス バー（下） */}
       <div
         className="absolute bottom-0 left-0 right-0 z-20 pointer-events-none"
-        style={{ height: 'clamp(24px, 4vh, 48px)', background: 'rgb(6, 4, 2)' }}
+        style={{ height: "clamp(24px, 4vh, 48px)", background: "rgb(6, 4, 2)" }}
       />
 
       {/* エレガントなヴィンテージ金枠線 */}

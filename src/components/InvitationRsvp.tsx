@@ -13,7 +13,8 @@ export function InvitationRsvp() {
       ref={ref}
       className="py-24 md:py-32 px-6 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(180deg, #f8f5f0 0%, #faf7f4 30%, #fdf9f6 60%, #faf7f3 100%)',
+        background:
+          "linear-gradient(180deg, #f8f5f0 0%, #faf7f4 30%, #fdf9f6 60%, #faf7f3 100%)",
       }}
     >
       {/* レースパターン */}
@@ -29,7 +30,12 @@ export function InvitationRsvp() {
         {/* セクションヘッダー */}
         <div className="section-header">
           <span className="magazine-label">RSVP</span>
-          <div className="vintage-flourish text-xl my-1" style={{ opacity: 0.75 }}>❦</div>
+          <div
+            className="vintage-flourish text-xl my-1"
+            style={{ opacity: 0.75 }}
+          >
+            ❦
+          </div>
           <h2
             className="section-title text-2xl md:text-4xl"
             style={{ fontFamily: "var(--font-vintage-serif)" }}

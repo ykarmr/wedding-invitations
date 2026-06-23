@@ -4,7 +4,8 @@
   /* Google Fonts 用の変数定義 */
   --font-handwritten: "Klee One", "Yu Klee", sans-serif;
   --font-rounded: "Zen Maru Gothic", sans-serif;
-  --font-mincho: "Shippori Mincho B1", "Hiragino Mincho ProN", "YuMincho", serif;
+  --font-mincho:
+    "Shippori Mincho B1", "Hiragino Mincho ProN", "YuMincho", serif;
   --font-yomogi: "Yomogi", cursive, sans-serif;
   --font-vintage-serif: "Cormorant Garamond", serif;
   --font-vintage-script: "Alex Brush", cursive;
@@ -96,8 +97,16 @@
 body {
   background-color: var(--color-cream);
   background-image:
-    radial-gradient(ellipse at 50% 0%, rgba(200, 148, 28, 0.04) 0%, transparent 55%),
-    radial-gradient(ellipse at 100% 100%, rgba(196, 124, 42, 0.025) 0%, transparent 50%),
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(200, 148, 28, 0.04) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      rgba(196, 124, 42, 0.025) 0%,
+      transparent 50%
+    ),
     linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.42),
@@ -435,16 +444,32 @@ section {
 }
 
 @keyframes filmFlicker {
-  0%, 87%, 100% { opacity: 1; }
-  89% { opacity: 0.97; }
-  92% { opacity: 1; }
-  95% { opacity: 0.975; }
-  97% { opacity: 1; }
+  0%,
+  87%,
+  100% {
+    opacity: 1;
+  }
+  89% {
+    opacity: 0.97;
+  }
+  92% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.975;
+  }
+  97% {
+    opacity: 1;
+  }
 }
 
 @keyframes goldShimmer {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .animate-fade-in {
@@ -480,7 +505,9 @@ section {
   border: 4px double var(--color-border);
   padding: 8px;
   background-color: var(--color-white);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07), 0 2px 8px rgba(200, 148, 28, 0.12);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.07),
+    0 2px 8px rgba(200, 148, 28, 0.12);
 }
 
 /* グラスモルフィズム風アースカラーカード */
@@ -530,9 +557,17 @@ section {
 
 /* 羊皮紙風カード */
 .parchment-card {
-  background: radial-gradient(ellipse at 50% 0%, rgba(200, 148, 28, 0.07) 0%, var(--color-beige-light) 38%, var(--color-cream) 100%);
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(200, 148, 28, 0.07) 0%,
+    var(--color-beige-light) 38%,
+    var(--color-cream) 100%
+  );
   border: 1px solid var(--color-border);
-  box-shadow: 0 4px 28px rgba(74, 60, 49, 0.1), inset 0 0 28px rgba(74, 60, 49, 0.04), 0 0 0 1px rgba(200, 148, 28, 0.09);
+  box-shadow:
+    0 4px 28px rgba(74, 60, 49, 0.1),
+    inset 0 0 28px rgba(74, 60, 49, 0.04),
+    0 0 0 1px rgba(200, 148, 28, 0.09);
 }
 
 /* ========================
@@ -659,7 +694,7 @@ section {
 }
 .corner-ornament::before,
 .corner-ornament::after {
-  content: '❧';
+  content: "❧";
   position: absolute;
   font-size: 2rem;
   color: var(--color-gold);
@@ -688,7 +723,7 @@ section {
   border: 1px solid rgba(200, 148, 28, 0.08);
 }
 .luxury-inner-frame::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 4px;
@@ -789,10 +824,15 @@ section {
 }
 .road-divider::before,
 .road-divider::after {
-  content: '';
+  content: "";
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border),
+    transparent
+  );
 }
 
 /* 印刷用スタイル - 専用コンポーネント用 */

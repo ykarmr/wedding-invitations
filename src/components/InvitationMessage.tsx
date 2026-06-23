@@ -30,7 +30,8 @@ export function InvitationMessage() {
       ref={ref}
       className="relative overflow-hidden"
       style={{
-        background: 'linear-gradient(180deg, #ffffff 0%, #fdf9f7 35%, #faf5f2 65%, #ffffff 100%)',
+        background:
+          "linear-gradient(180deg, #ffffff 0%, #fdf9f7 35%, #faf5f2 65%, #ffffff 100%)",
       }}
     >
       {/* アール・デコ調パターン */}
@@ -79,9 +80,7 @@ export function InvitationMessage() {
             }}
           >
             {/* 写真 - スマホ横撮り 4:3 比率 */}
-            <div
-              className="relative w-full md:w-1/2 overflow-hidden bg-black flex-shrink-0 aspect-[4/3]"
-            >
+            <div className="relative w-full md:w-1/2 overflow-hidden bg-black flex-shrink-0 aspect-[4/3]">
               <img
                 src={msg.image}
                 alt={msg.alt}
@@ -97,7 +96,10 @@ export function InvitationMessage() {
             </div>
 
             {/* テキストエリア */}
-            <div className="flex-1 flex flex-col justify-center px-8 sm:px-12 md:px-14 lg:px-20 py-12 md:py-0 relative z-10" style={{ background: 'inherit' }}>
+            <div
+              className="flex-1 flex flex-col justify-center px-8 sm:px-12 md:px-14 lg:px-20 py-12 md:py-0 relative z-10"
+              style={{ background: "inherit" }}
+            >
               {/* ロールラベル */}
               <p
                 className="text-[10px] tracking-[0.52em] uppercase text-[var(--color-gold)] mb-5 font-bold"
@@ -109,7 +111,10 @@ export function InvitationMessage() {
               {/* スクリプトフォント名（ローマ字） */}
               <h3
                 className="text-6xl sm:text-7xl leading-none text-[var(--color-text-dark)] mb-1"
-                style={{ fontFamily: "var(--font-vintage-script)", fontWeight: 400 }}
+                style={{
+                  fontFamily: "var(--font-vintage-script)",
+                  fontWeight: 400,
+                }}
               >
                 {msg.nameRomaji}
               </h3>

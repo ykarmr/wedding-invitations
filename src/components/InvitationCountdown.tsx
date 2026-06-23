@@ -45,9 +45,7 @@ function CountCard({
         transitionDelay: delay,
       }}
     >
-      <div
-        className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center border-b border-[var(--color-gold)]/60"
-      >
+      <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center border-b border-[var(--color-gold)]/60">
         <span
           className="text-2xl sm:text-3xl md:text-4xl font-bold tabular-nums leading-none tracking-wider"
           style={{
@@ -61,7 +59,10 @@ function CountCard({
       </div>
       <span
         className="text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold"
-        style={{ color: "var(--color-text-light)", fontFamily: "var(--font-vintage-serif)" }}
+        style={{
+          color: "var(--color-text-light)",
+          fontFamily: "var(--font-vintage-serif)",
+        }}
       >
         {label}
       </span>
@@ -85,10 +86,7 @@ export function InvitationCountdown() {
   const isPast = WEDDING_DATE.getTime() <= Date.now();
 
   return (
-    <section
-      ref={ref}
-      className="py-24 md:py-32 px-6 relative overflow-hidden"
-    >
+    <section ref={ref} className="py-24 md:py-32 px-6 relative overflow-hidden">
       {/* 背景画像 */}
       <div className="absolute inset-0 z-0">
         <img
@@ -123,7 +121,9 @@ export function InvitationCountdown() {
               Countdown
             </span>
           </div>
-          <div className="vintage-flourish mb-6 text-[var(--color-gold-light)]">❦</div>
+          <div className="vintage-flourish mb-6 text-[var(--color-gold-light)]">
+            ❦
+          </div>
           <h2
             className="text-3xl md:text-4xl font-bold mb-5 tracking-[0.2em] text-[var(--color-cream)]"
             style={{ fontFamily: "var(--font-vintage-serif)" }}
@@ -150,13 +150,39 @@ export function InvitationCountdown() {
               </p>
             ) : (
               <div className="flex items-start gap-2 sm:gap-4">
-                <CountCard value={timeLeft.days}    label="Days"  delay="0ms"   isInView={isInView} />
-                <span className="text-2xl sm:text-3xl font-bold mt-4 animate-pulse-soft text-white/70">:</span>
-                <CountCard value={timeLeft.hours}   label="Hours" delay="100ms" isInView={isInView} />
-                <span className="text-2xl sm:text-3xl font-bold mt-4 animate-pulse-soft text-white/70">:</span>
-                <CountCard value={timeLeft.minutes} label="Mins"  delay="200ms" isInView={isInView} />
-                <span className="text-2xl sm:text-3xl font-bold mt-4 animate-pulse-soft text-white/70">:</span>
-                <CountCard value={timeLeft.seconds} label="Secs"  delay="300ms" isInView={isInView} />
+                <CountCard
+                  value={timeLeft.days}
+                  label="Days"
+                  delay="0ms"
+                  isInView={isInView}
+                />
+                <span className="text-2xl sm:text-3xl font-bold mt-4 animate-pulse-soft text-white/70">
+                  :
+                </span>
+                <CountCard
+                  value={timeLeft.hours}
+                  label="Hours"
+                  delay="100ms"
+                  isInView={isInView}
+                />
+                <span className="text-2xl sm:text-3xl font-bold mt-4 animate-pulse-soft text-white/70">
+                  :
+                </span>
+                <CountCard
+                  value={timeLeft.minutes}
+                  label="Mins"
+                  delay="200ms"
+                  isInView={isInView}
+                />
+                <span className="text-2xl sm:text-3xl font-bold mt-4 animate-pulse-soft text-white/70">
+                  :
+                </span>
+                <CountCard
+                  value={timeLeft.seconds}
+                  label="Secs"
+                  delay="300ms"
+                  isInView={isInView}
+                />
               </div>
             )}
           </div>

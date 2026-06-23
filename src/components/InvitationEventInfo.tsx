@@ -12,7 +12,8 @@ export function InvitationEventInfo() {
       ref={ref}
       className="py-24 md:py-32 px-6 relative"
       style={{
-        background: 'linear-gradient(180deg, #faf8f4 0%, #f7f5f0 30%, #f5f3ee 60%, #f8f6f2 100%)',
+        background:
+          "linear-gradient(180deg, #faf8f4 0%, #f7f5f0 30%, #f5f3ee 60%, #f8f6f2 100%)",
       }}
     >
       {/* フルール・ド・リス調パターン */}
@@ -53,7 +54,10 @@ export function InvitationEventInfo() {
           <div className="border-t-4 border-double border-[var(--color-border)] pt-8 sm:pt-10 flex flex-col justify-between">
             <div>
               <span className="pink-tag mb-4 inline-block font-bold">WHEN</span>
-              <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-6" style={{ fontFamily: "var(--font-vintage-serif)" }}>
+              <h3
+                className="text-xl font-bold text-[var(--color-text-dark)] mb-6"
+                style={{ fontFamily: "var(--font-vintage-serif)" }}
+              >
                 Date & Time
               </h3>
               <div className="space-y-6 font-mincho text-[var(--color-text)] tracking-wider">
@@ -97,8 +101,13 @@ export function InvitationEventInfo() {
           {/* 会場情報 */}
           <div className="border-t-4 border-double border-[var(--color-border)] pt-8 sm:pt-10 flex flex-col justify-between">
             <div>
-              <span className="elegant-tag mb-4 inline-block font-bold">WHERE</span>
-              <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-6" style={{ fontFamily: "var(--font-vintage-serif)" }}>
+              <span className="elegant-tag mb-4 inline-block font-bold">
+                WHERE
+              </span>
+              <h3
+                className="text-xl font-bold text-[var(--color-text-dark)] mb-6"
+                style={{ fontFamily: "var(--font-vintage-serif)" }}
+              >
                 Venue
               </h3>
               <div className="space-y-6 font-mincho text-[var(--color-text)] tracking-wider">
@@ -140,7 +149,10 @@ export function InvitationEventInfo() {
 
         {/* アクセスタブ */}
         <div className="mt-16 border-t-4 border-double border-[var(--color-border)] pt-10">
-          <h3 className="text-center font-bold text-[var(--color-text-dark)] mb-6 text-sm sm:text-base md:text-lg tracking-widest" style={{ fontFamily: "var(--font-vintage-serif)" }}>
+          <h3
+            className="text-center font-bold text-[var(--color-text-dark)] mb-6 text-sm sm:text-base md:text-lg tracking-widest"
+            style={{ fontFamily: "var(--font-vintage-serif)" }}
+          >
             — Access —
           </h3>
 

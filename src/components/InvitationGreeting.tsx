@@ -10,7 +10,8 @@ export function InvitationGreeting() {
       ref={ref}
       className="py-24 md:py-32 px-6 text-center relative"
       style={{
-        background: 'linear-gradient(180deg, #faf8f5 0%, #ffffff 40%, #faf7f3 100%)',
+        background:
+          "linear-gradient(180deg, #faf8f5 0%, #ffffff 40%, #faf7f3 100%)",
       }}
     >
       {/* ダマスク調パターン */}
@@ -34,7 +35,7 @@ export function InvitationGreeting() {
           <div className="vintage-double-rule mb-10" />
 
           <div className="decorative-line mb-4">
-            <span 
+            <span
               className="text-sm tracking-[0.25em] uppercase text-[var(--color-text-light)] font-medium"
               style={{ fontFamily: "var(--font-vintage-serif)" }}
             >
@@ -58,9 +59,7 @@ export function InvitationGreeting() {
               <br />
               お慶び申し上げます
             </p>
-            <p>
-              このたび　私たちは結婚式を挙げることになりました
-            </p>
+            <p>このたび　私たちは結婚式を挙げることになりました</p>
             <p>
               つきましては　日頃お世話になっている皆様に
               <br />
@@ -87,7 +86,7 @@ export function InvitationGreeting() {
               <div className="text-base sm:text-lg md:text-xl font-bold tracking-widest text-[var(--color-text-dark)] font-mincho">
                 有村 勇樹
               </div>
-              <div 
+              <div
                 className="text-lg text-[var(--color-gold)] font-medium select-none"
                 style={{ fontFamily: "var(--font-vintage-script)" }}
               >
