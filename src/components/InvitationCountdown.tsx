@@ -134,7 +134,7 @@ export function InvitationCountdown() {
             className="text-xs tracking-[0.2em] text-white/80 font-bold"
             style={{ fontFamily: "var(--font-mincho)" }}
           >
-            2026年 10月 24日（土）10:30 挙式
+            2026年 10月 24日（土）14:30 挙式
           </p>
         </div>
 

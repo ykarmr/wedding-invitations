@@ -72,10 +72,10 @@ export function InvitationEventInfo() {
                       挙式
                     </p>
                     <p className="text-sm sm:text-base md:text-lg font-bold mt-1">
-                      午前 10:30 <span className="text-xs">開始</span>
+                      午後 2:30 <span className="text-xs">開始</span>
                     </p>
                     <p className="text-[10px] sm:text-xs text-[var(--color-text-light)] mt-0.5">
-                      （受付 10:00〜）
+                      （受付 1:30〜）
                     </p>
                   </div>
                   <div>
@@ -83,7 +83,7 @@ export function InvitationEventInfo() {
                       披露宴
                     </p>
                     <p className="text-sm sm:text-base md:text-lg font-bold mt-1">
-                      午前 11:15 <span className="text-xs">開始</span>
+                      午後 3:15 <span className="text-xs">開始</span>
                     </p>
                   </div>
                 </div>
