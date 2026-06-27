@@ -166,7 +166,7 @@ export function InvitationCover() {
 
         {/* 右：日付スタンプ */}
         <div className="location-stamp hidden sm:flex flex-col items-end text-right">
-          <span>2026 &middot; X &middot; XXIV</span>
+          <span>2026 &middot; 10 &middot; 24</span>
           <span className="text-[7px] opacity-50 tracking-[0.22em] mt-0.5">
             挙式 ・ 披露孴
           </span>

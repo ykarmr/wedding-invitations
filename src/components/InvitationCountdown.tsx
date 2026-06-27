@@ -49,7 +49,7 @@ function CountCard({
         <span
           className="text-2xl sm:text-3xl md:text-4xl font-bold tabular-nums leading-none tracking-wider"
           style={{
-            fontFamily: "var(--font-vintage-serif)",
+            fontFamily: "var(--font-mincho)",
             color: "var(--color-cream)",
             textShadow: "0 0 20px rgba(200,148,28,0.4)",
           }}
