@@ -49,7 +49,7 @@ export function InvitationRsvp() {
           <p className="text-xs sm:text-sm md:text-base text-[var(--color-text-dark)] tracking-wider leading-loose">
             お手数ではございますが 準備の都合上
             <br />
-            <span className="inline-block whitespace-nowrap text-sm sm:text-lg md:text-xl font-bold border-b-2 border-[var(--color-gold)] pb-0.5 px-1.5 sm:px-2 mx-0.5 sm:mx-1">
+            <span className="inline-block whitespace-nowrap text-sm sm:text-lg md:text-xl font-bold border-b border-[var(--color-gold)] pb-1 px-2 mx-1 tracking-widest text-[var(--color-text-dark)]">
               2026年9月1日（火）
             </span>
             までに
@@ -67,7 +67,26 @@ export function InvitationRsvp() {
           {/* 上部ビンテージ罫線 */}
           <div className="vintage-double-rule mb-10" />
           {/* アイコン */}
-          <div className="text-4xl sm:text-5xl">🕊️</div>
+          <div className="flex justify-center my-4">
+            <svg
+              className="w-12 h-12 text-[var(--color-gold)] opacity-70"
+              viewBox="0 0 64 64"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M32 54C32 54 32 38 42 28C48 22 52 18 52 18" />
+              <path d="M32 54C32 54 32 40 24 32C18 26 12 22 12 22" />
+              <path d="M42 28C40 24 36 22 36 22C36 22 39 26 40 29" />
+              <path d="M47 23C45 19 41 17 41 17C41 17 44 21 45 24" />
+              <path d="M35 37C32 34 28 33 28 33C28 33 31 36 33 38" />
+              <path d="M24 32C23 28 19 26 19 26C19 26 21 29 22 33" />
+              <path d="M28 43C25 41 21 40 21 40C21 40 24 43 25 45" />
+              <path d="M32 48C32 46 30 45 30 45C30 45 31 47 31 49" />
+            </svg>
+          </div>
 
           {/* 本文 */}
           <div className="font-mincho space-y-3 text-[var(--color-text)] leading-relaxed text-sm sm:text-base">
@@ -86,7 +105,7 @@ export function InvitationRsvp() {
             href={PIARY_RSVP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block w-full max-w-xs py-4 px-8 rounded-xl font-bold tracking-widest text-white bg-[var(--color-sage-dark)] hover:bg-[var(--color-forest)] shadow-md border-2 border-[var(--color-border)] transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 font-mincho"
+            className="btn-shimmer inline-block w-full max-w-xs py-4 px-8 rounded-lg font-bold tracking-[0.2em] text-white bg-[var(--color-sage-dark)] hover:bg-[var(--color-forest)] shadow-sm border border-[var(--color-border-light)] hover:shadow-md transition-all duration-300 active:scale-98 font-mincho text-xs sm:text-sm uppercase"
           >
             <span className="flex items-center justify-center gap-2">
               <span>ご回答はこちら</span>

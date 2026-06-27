@@ -53,7 +53,10 @@ export function InvitationEventInfo() {
           {/* 日時情報 */}
           <div className="border-t-4 border-double border-[var(--color-border)] pt-8 sm:pt-10 flex flex-col justify-between">
             <div>
-              <span className="pink-tag mb-4 inline-block font-bold">WHEN</span>
+              <div className="flex items-center gap-2 mb-4 justify-start">
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-rose)]"></span>
+                <span className="text-xs tracking-[0.2em] font-bold text-[var(--color-rose-dark)] uppercase" style={{ fontFamily: "var(--font-vintage-serif)" }}>WHEN</span>
+              </div>
               <h3
                 className="text-xl font-bold text-[var(--color-text-dark)] mb-6"
                 style={{ fontFamily: "var(--font-vintage-serif)" }}
@@ -101,9 +104,10 @@ export function InvitationEventInfo() {
           {/* 会場情報 */}
           <div className="border-t-4 border-double border-[var(--color-border)] pt-8 sm:pt-10 flex flex-col justify-between">
             <div>
-              <span className="elegant-tag mb-4 inline-block font-bold">
-                WHERE
-              </span>
+              <div className="flex items-center gap-2 mb-4 justify-start">
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-sage-dark)]"></span>
+                <span className="text-xs tracking-[0.2em] font-bold text-[var(--color-sage-dark)] uppercase" style={{ fontFamily: "var(--font-vintage-serif)" }}>WHERE</span>
+              </div>
               <h3
                 className="text-xl font-bold text-[var(--color-text-dark)] mb-6"
                 style={{ fontFamily: "var(--font-vintage-serif)" }}
@@ -134,14 +138,30 @@ export function InvitationEventInfo() {
                 </div>
               </div>
             </div>
-            <div className="mt-8 pt-4 border-t border-[var(--color-border-light)] flex gap-4">
+            <div className="mt-8 pt-6 border-t border-[var(--color-border-light)] flex">
               <a
                 href="https://www.bestbridal.co.jp/tokyo/applause_ichigaya/access/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-[var(--color-sage-dark)] border-b border-[var(--color-sage-dark)] pb-0.5 hover:text-[var(--color-text-dark)] transition-colors font-bold"
+                className="link-outline-btn w-full sm:w-auto"
               >
-                式場公式アクセスページへ
+                <span className="flex items-center gap-1.5">
+                  <span>式場公式アクセスページへ</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-3.5 w-3.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </span>
               </a>
             </div>
           </div>
@@ -157,37 +177,33 @@ export function InvitationEventInfo() {
           </h3>
 
           {/* タブ切り替えボタン */}
-          <div className="flex justify-center border-b border-[var(--color-border)] mb-6">
-            <button
-              onClick={() => setActiveTab("train")}
-              className={`px-4 sm:px-6 py-3 text-xs sm:text-sm font-bold font-mincho transition-all border-b-2 -mb-[2px] ${
-                activeTab === "train"
-                  ? "border-[var(--color-gold)] text-[var(--color-text-dark)]"
-                  : "border-transparent text-[var(--color-text-light)] hover:text-[var(--color-text-dark)]"
-              }`}
-            >
-              電車
-            </button>
-            <button
-              onClick={() => setActiveTab("taxi")}
-              className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-bold font-mincho transition-all border-b-2 -mb-[2px] ${
-                activeTab === "taxi"
-                  ? "border-[var(--color-gold)] text-[var(--color-text-dark)]"
-                  : "border-transparent text-[var(--color-text-light)] hover:text-[var(--color-text-dark)]"
-              }`}
-            >
-              タクシー
-            </button>
-            <button
-              onClick={() => setActiveTab("car")}
-              className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-bold font-mincho transition-all border-b-2 -mb-[2px] ${
-                activeTab === "car"
-                  ? "border-[var(--color-gold)] text-[var(--color-text-dark)]"
-                  : "border-transparent text-[var(--color-text-light)] hover:text-[var(--color-text-dark)]"
-              }`}
-            >
-              お車
-            </button>
+          <div className="flex justify-center mb-8">
+            <div className="access-tabs-container">
+              <button
+                onClick={() => setActiveTab("train")}
+                className={`access-tab-btn font-mincho ${
+                  activeTab === "train" ? "active" : "inactive"
+                }`}
+              >
+                電車
+              </button>
+              <button
+                onClick={() => setActiveTab("taxi")}
+                className={`access-tab-btn font-mincho ${
+                  activeTab === "taxi" ? "active" : "inactive"
+                }`}
+              >
+                タクシー
+              </button>
+              <button
+                onClick={() => setActiveTab("car")}
+                className={`access-tab-btn font-mincho ${
+                  activeTab === "car" ? "active" : "inactive"
+                }`}
+              >
+                お車
+              </button>
+            </div>
           </div>
 
           {/* タブ詳細コンテンツ (アコーディオン風アニメーション付き) */}

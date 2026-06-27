@@ -4,10 +4,12 @@ import { useInView } from "@/hooks/useInView";
 import updateEnvPath from "@/utils/updateEnvPath";
 
 const slideshowPhotos = [
-  "/images/invitation_cover.jpg",
-  "/images/invitation_gallery1.jpg",
-  "/images/invitation_gallery2.jpg",
-  "/images/invitation_gallery3.jpg",
+  "/images/invitation_cover_1.jpg",
+  "/images/invitation_cover_2.jpg",
+  "/images/invitation_cover_3.jpg",
+  "/images/invitation_cover_4.jpg",
+
+
 ];
 
 export function InvitationCover() {
