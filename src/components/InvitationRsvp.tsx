@@ -19,10 +19,6 @@ export function InvitationRsvp() {
     >
       {/* レースパターン */}
       <div className="pattern-lace" />
-      {/* コーナーオーナメント */}
-      <div className="corner-ornament" />
-      {/* ゴールドインナーフレーム */}
-      <div className="luxury-inner-frame" />
 
       {/* 上部より流れる細線 */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-12 bg-[var(--color-text-light)] opacity-30"></div>
