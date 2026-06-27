@@ -28,12 +28,11 @@ export function InvitationCover() {
       ref={ref}
       className="relative h-screen w-full flex flex-col items-center justify-between bg-black overflow-hidden py-16 px-6 text-white"
     >
-      {/* 背景写真のスライドショー（フェードイン・フェードアウト＆ゆっくりとしたズーム） */}
-      <div className="absolute inset-0 w-full h-full z-0 select-none pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 w-full h-full z-0 select-none pointer-events-none overflow-hidden [transform:translateZ(0)]">
         {slideshowPhotos.map((src, index) => (
           <div
             key={src}
-            className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-[2000ms] ease-in-out ${
+            className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-[2000ms] ease-in-out [backface-visibility:hidden] [transform:translate3d(0,0,0)] [will-change:opacity] ${
               index === currentIdx ? "opacity-100" : "opacity-0"
             }`}
             style={{
