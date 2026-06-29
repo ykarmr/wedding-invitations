@@ -93,9 +93,7 @@ export function InvitationGreeting() {
                 and
               </div>
               <div className="text-base sm:text-lg md:text-xl font-bold tracking-widest text-[var(--color-text-dark)] font-mincho">
-                有村 紗弥香
-                <br />
-                （旧姓 池上）
+                池上 紗弥香
               </div>
             </div>
           </div>
