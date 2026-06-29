@@ -10,7 +10,6 @@ const messages = [
     nameRomaji: "Yuki",
     image: updateEnvPath("/images/groom.jpg"),
     alt: "新郎 有村 勇樹",
-    text: "これからどうぞよろしくお願いいたします。",
   },
   {
     role: "新婦",
@@ -18,7 +17,6 @@ const messages = [
     nameRomaji: "Sayaka",
     image: updateEnvPath("/images/bride.jpg"),
     alt: "新婦 池上 紗弥香",
-    text: "温かい家庭を築いていきたいと思います。",
   },
 ];
 
@@ -51,16 +49,11 @@ export function InvitationMessage() {
             className="text-sm tracking-[0.25em] uppercase text-[var(--color-text-light)]"
             style={{ fontFamily: "var(--font-vintage-serif)" }}
           >
-            Message from Us
+            Bride & Groom
           </span>
         </div>
         <div className="vintage-flourish mb-4">❦</div>
-        <h2
-          className="text-2xl md:text-3xl font-bold tracking-[0.2em] text-[var(--color-text-dark)]"
-          style={{ fontFamily: "var(--font-mincho)" }}
-        >
-          ふたりより
-        </h2>
+
       </div>
 
       {/* エディトリアルレイアウト */}
@@ -130,10 +123,7 @@ export function InvitationMessage() {
               {/* ゴールドライン */}
               <div className="w-10 h-px bg-[var(--color-gold)] mb-8 opacity-70" />
 
-              {/* メッセージ */}
-              <p className="text-sm sm:text-base leading-[3] tracking-wider text-[var(--color-text)] font-mincho max-w-[300px]">
-                {msg.text}
-              </p>
+       
             </div>
           </div>
         );

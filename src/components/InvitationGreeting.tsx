@@ -59,13 +59,13 @@ export function InvitationGreeting() {
               <br />
               お慶び申し上げます
             </p>
-            <p>このたび　私たちは結婚式を挙げることになりました</p>
+            <p>このたび　私たちは結婚式を挙げる運びとなりました</p>
             <p>
               つきましては　日頃お世話になっている皆様に
               <br />
-              私たちの門出を見守っていただきたく
+              私たちの新たな門出をお見守りいただきたく
               <br />
-              ささやかながら　小宴をもうけました
+              ささやかな祝宴を催します
             </p>
             <p>
               ご多用の折　誠に恐縮ではございますが
@@ -93,7 +93,9 @@ export function InvitationGreeting() {
                 and
               </div>
               <div className="text-base sm:text-lg md:text-xl font-bold tracking-widest text-[var(--color-text-dark)] font-mincho">
-                池上 紗弥香
+                有村 紗弥香
+                <br />
+                （旧姓 池上）
               </div>
             </div>
           </div>

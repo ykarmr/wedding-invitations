@@ -5,7 +5,7 @@ import { useInView } from "@/hooks/useInView";
 
 export function InvitationEventInfo() {
   const { ref, isInView } = useInView();
-  const [activeTab, setActiveTab] = useState<"train" | "taxi" | "car">("train");
+  const [activeTab, setActiveTab] = useState<"train" | "taxi">("train");
 
   return (
     <section
@@ -78,7 +78,7 @@ export function InvitationEventInfo() {
                       午後 2:30 <span className="text-xs">開始</span>
                     </p>
                     <p className="text-[10px] sm:text-xs text-[var(--color-text-light)] mt-0.5">
-                      （受付 1:30〜）
+                      （受付 午後 1:30〜）
                     </p>
                   </div>
                   <div>
@@ -191,14 +191,6 @@ export function InvitationEventInfo() {
               >
                 タクシー
               </button>
-              <button
-                onClick={() => setActiveTab("car")}
-                className={`access-tab-btn font-mincho ${
-                  activeTab === "car" ? "active" : "inactive"
-                }`}
-              >
-                お車
-              </button>
             </div>
           </div>
 
@@ -221,13 +213,6 @@ export function InvitationEventInfo() {
                     </span>{" "}
                     より徒歩2分
                   </li>
-                  <li>
-                    都営大江戸線{" "}
-                    <span className="font-bold text-[var(--color-text-dark)]">
-                      「牛込柳町駅」南東出口
-                    </span>{" "}
-                    より徒歩7分
-                  </li>
                 </ul>
               </div>
             )}
@@ -243,30 +228,10 @@ export function InvitationEventInfo() {
                     <span className="font-bold text-[var(--color-text-dark)]">
                       「新宿駅」
                     </span>{" "}
-                    南口または西口より乗車、車で約10分。
+                    南口または西口より乗車　車で約10分
                   </li>
                   <li>
-                    運転手の方へ「市谷仲之町（いちがやなかのちょう）のアプローズスクエアまで」とお伝えいただくとスムーズです。
-                  </li>
-                </ul>
-              </div>
-            )}
-
-            {activeTab === "car" && (
-              <div className="space-y-3 animate-fade-in">
-                <p className="font-bold text-[var(--color-text-dark)]">
-                  ● お車でお越しの方へ
-                </p>
-                <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-[var(--color-text-light)]">
-                  <li>
-                    首都高速4号新宿線{" "}
-                    <span className="font-bold text-[var(--color-text-dark)]">
-                      「外苑出口」
-                    </span>{" "}
-                    より約10分。
-                  </li>
-                  <li>
-                    式場専用の駐車場スペースが限られておりますので、できる限り公共交通機関のご利用をお願いいたします。お車でお越しいただく場合は、事前にお問い合わせください。
+                    運転手の方へ「市谷仲之町（いちがやなかのちょう）のアプローズスクエアまで」とお伝えいただくとスムーズです
                   </li>
                 </ul>
               </div>
