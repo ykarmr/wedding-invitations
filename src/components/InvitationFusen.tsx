@@ -72,19 +72,14 @@ export function InvitationFusen() {
           </div>
 
           <div className="text-center space-y-6 pt-4">
-            <span className="text-[10px] tracking-[0.3em] font-serif uppercase text-[var(--color-gold)] font-bold">
-              Special Message
-            </span>
-
-            {currentFusen.title &&
-            <h3
-              className="text-base sm:text-lg font-bold text-[var(--color-text-dark)] pb-3 border-b border-dashed border-[var(--color-border)]"
-              style={{ fontFamily: "var(--font-yomogi)" }}
-            >
-              {currentFusen.title}
-            </h3>
-            }
-
+            {currentFusen.title && (
+              <h3
+                className="text-base sm:text-lg font-bold text-[var(--color-text-dark)] pb-3 border-b border-dashed border-[var(--color-border)]"
+                style={{ fontFamily: "var(--font-yomogi)" }}
+              >
+                {currentFusen.title}
+              </h3>
+            )}
 
             {/* 改行を反映して表示 */}
             <p className="text-xs sm:text-sm md:text-base text-[var(--color-text)] leading-[2.2] tracking-widest font-mincho whitespace-pre-line">

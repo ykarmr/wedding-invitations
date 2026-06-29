@@ -51,7 +51,12 @@ export function InvitationEventInfo() {
             <div>
               <div className="flex items-center gap-2 mb-4 justify-start">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-rose)]"></span>
-                <span className="text-xs tracking-[0.2em] font-bold text-[var(--color-rose-dark)] uppercase" style={{ fontFamily: "var(--font-vintage-serif)" }}>WHEN</span>
+                <span
+                  className="text-xs tracking-[0.2em] font-bold text-[var(--color-rose-dark)] uppercase"
+                  style={{ fontFamily: "var(--font-vintage-serif)" }}
+                >
+                  WHEN
+                </span>
               </div>
               <h3
                 className="text-xl font-bold text-[var(--color-text-dark)] mb-6"
@@ -102,7 +107,12 @@ export function InvitationEventInfo() {
             <div>
               <div className="flex items-center gap-2 mb-4 justify-start">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-sage-dark)]"></span>
-                <span className="text-xs tracking-[0.2em] font-bold text-[var(--color-sage-dark)] uppercase" style={{ fontFamily: "var(--font-vintage-serif)" }}>WHERE</span>
+                <span
+                  className="text-xs tracking-[0.2em] font-bold text-[var(--color-sage-dark)] uppercase"
+                  style={{ fontFamily: "var(--font-vintage-serif)" }}
+                >
+                  WHERE
+                </span>
               </div>
               <h3
                 className="text-xl font-bold text-[var(--color-text-dark)] mb-6"

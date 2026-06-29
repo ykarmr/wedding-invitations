@@ -53,7 +53,6 @@ export function InvitationMessage() {
           </span>
         </div>
         <div className="vintage-flourish mb-4">❦</div>
-
       </div>
 
       {/* エディトリアルレイアウト */}
@@ -122,8 +121,6 @@ export function InvitationMessage() {
 
               {/* ゴールドライン */}
               <div className="w-10 h-px bg-[var(--color-gold)] mb-8 opacity-70" />
-
-       
             </div>
           </div>
         );
