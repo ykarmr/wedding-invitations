@@ -17,7 +17,7 @@ export function InvitationFusen() {
   // 各付箋データの定義
   const fusenData: Record<
     string,
-    { title: string; text: string; note?: string }
+    { title?: string; text: string; note?: string }
   > = {
     dry: {
       title: "乾杯のご発声のご依頼",
@@ -33,7 +33,6 @@ export function InvitationFusen() {
       note: "※挙式は午後2時30分からとなります",
     },
     family: {
-      title: "親族紹介のご案内",
       text: "尚ご多用中恐縮に存じますが親族紹介にも\nご列席賜りたく当日 午後1時40分 までに\nお越しくださいますようお願い申し上げます",
       note: "※挙式に先立ち親族控室にて親族紹介を行います",
     },
@@ -77,12 +76,15 @@ export function InvitationFusen() {
               Special Message
             </span>
 
+            {currentFusen.title &&
             <h3
               className="text-base sm:text-lg font-bold text-[var(--color-text-dark)] pb-3 border-b border-dashed border-[var(--color-border)]"
               style={{ fontFamily: "var(--font-yomogi)" }}
             >
               {currentFusen.title}
             </h3>
+            }
+
 
             {/* 改行を反映して表示 */}
             <p className="text-xs sm:text-sm md:text-base text-[var(--color-text)] leading-[2.2] tracking-widest font-mincho whitespace-pre-line">
